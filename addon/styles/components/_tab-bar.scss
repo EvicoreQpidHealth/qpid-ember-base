@@ -1,0 +1,214 @@
+
+/*******************************************************************************
+ ** Tab Bar and Sub Tab Bar
+ ******************************************************************************/
+
+.tab-bar {
+  @include themify {
+    background: theme-get(secondary-color);
+    padding: 0 1rem;
+  }
+}
+
+.tab-bar.editing {
+  background: #CE5161;
+}
+
+.left-small {
+  border-color:#2C3382;
+}
+
+.tab-bar.editing .left-small {
+  border-color: darken(#CE5161, 5);
+}
+
+.left-small + .left {
+  margin-left:2.8125rem
+}
+
+/*******************************************************************************
+ ** Sub Top Bar
+ ******************************************************************************/
+
+.sub-top-bar {
+  background-color:#fff;
+  border-bottom:1px solid $border-color;
+  padding:0;
+}
+
+.sub-top-bar h4 {
+  font-size: 1rem;
+  margin: 1rem;
+}
+
+.sub-top-bar button {
+  margin: 0.25rem;
+}
+
+.sub-top-bar p {
+  display: inline-block;
+  padding: 0.75rem 1rem;
+  margin: 0;
+  font-weight: bold;
+  color: #3A46A3;
+}
+
+p.subtle, .subtle {
+  color: #999;
+}
+
+.header-section .search-input-wrapper input[type=text]:focus {
+  background:#2C3382;
+  color:#fff;
+  border-color:#2C3382;
+  border-bottom-style: solid;
+  box-shadow:inset 0 0 .1em rgba(0,0,0,0.3);
+  border-radius: 0.2rem;
+
+  width: 100%;
+
+  padding-left: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: .3rem;
+  padding-right: 2.5rem;
+  text-align: left;
+}
+
+.header-section .search-input-wrapper input[type=text] {
+  letter-spacing: .3rem;
+  font-weight: bold;
+  margin-top: 0.25rem;
+  background:transparent;
+  color:#fff;
+  border-color:transparent;
+  box-shadow: none;
+  border-radius: 0;
+
+  transition: none;
+  text-transform: uppercase;
+
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  z-index: 99;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.sub-top-bar {
+  input[type="text"] {
+    color: #000;
+    height: 3.075rem;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: transparent;
+    text-align: left;
+    padding-left: 2.5rem;
+  }
+  input[type="text"]:focus {
+    background: transparent;
+    padding-left: 2.5rem;
+  }
+}
+
+.search-input-wrapper.extra-space:after {
+  top: 0.9rem;
+}
+
+.search-input-wrapper .search-button-close {
+  position: absolute;
+  cursor: pointer;
+  top: 0.05rem;
+  right: 1rem;
+  z-index: 100;
+  color: #ccc;
+}
+
+.search-input-wrapper .search-icon {
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  z-index: 100;
+  color: #ccc;
+}
+
+.search-input-wrapper.dark .search-button-close, .search-input-wrapper.dark .search-icon {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.search-input-wrapper.extra-space .search-button-close, .search-input-wrapper.extra-space .search-icon {
+  top: 0.75rem;
+}
+
+// remove the default clear button in internet explorer
+.search-input-wrapper input[type=text]::-ms-clear {
+  display: none;
+}
+
+.header-section .fa-bell {
+  font-size: 19px;
+  margin-right: 2%;
+  vertical-align: sub;
+}
+.header-section .notification-amount {
+  vertical-align: middle;
+  color: white;
+  white-space: nowrap;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.header-section.right {
+  .username {
+    display: block;
+    margin-right: 10px;
+    margin-left: 63px;
+  }
+  .header-widget-wrap {
+    .fa-angle-down {
+      position: absolute;
+      top: 12px;
+      right: -2px;
+    }
+  }
+}
+/*******************************************************************************
+ ** Header Input placeholder text - Should have a search selector,
+ ** right now using tab-bar-section as a temp hook
+ ******************************************************************************/
+
+.header-section ::-webkit-input-placeholder {
+  color: #636BB8;
+}
+
+.header-section :-moz-placeholder { /* Firefox 18- */
+  color: #636BB8;
+}
+
+.header-section ::-moz-placeholder {  /* Firefox 19+ */
+  color: #636BB8;
+}
+
+.header-section :-ms-input-placeholder {
+  color: #636BB8;
+}
+
+@media #{$small-only} {
+  .tab-bar {
+    .notification-amount, .title, .username {
+      letter-spacing: .1rem;
+    }
+  }
+}
+@media #{$medium-only} {
+  .tab-bar {
+    .notification-amount, .title, .username {
+      letter-spacing: .15rem;
+    }
+  }
+}

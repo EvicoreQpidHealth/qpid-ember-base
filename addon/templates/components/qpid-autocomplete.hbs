@@ -1,0 +1,67 @@
+{{#if useTextArea}}
+  {{textarea
+    class=inputClass
+    value=searchInputText
+    placeholder=placeHolderText
+    autocomplete="off"
+    spellcheck="false"
+    enter=(action 'onEnter')
+    escape-press=(action 'onEscapePress')
+    keyDown=(action 'onKeyDown')
+  }}
+{{else}}
+  {{#unless shouldHideDownArrow}}
+    {{fa-icon icon="angle-down" class="dropdown-arrow"}}
+  {{/unless}}
+  {{input
+    class=inputClass
+    value=searchInputText
+    placeholder=placeHolderText
+    autocomplete="off"
+    spellcheck="false"
+    enter=(action 'onEnter')
+    escape-press=(action 'onEscapePress')
+  }}
+{{/if}}
+
+{{#if shouldShowSuggestions}}
+<div id={{autoCompleteId}} class="dropdown-wrap">
+  <ul class="dropdown suggestions">
+    {{#if isLoadingNewQuery}}
+      <li class="suggestion">
+        {{ember-spinner lines=9 length=12 radius=20 scale=0.25 width=13 rotate=0 speed='1'}}
+      </li>
+    {{else}}
+      {{#if shouldShowHeader}}
+        <li class="suggestion heading">
+          {{yield header}}
+        </li>
+      {{/if}}
+
+      {{#each suggestions as |result index|}}
+        <li class="suggestion {{if (eq _highlightIndex index) 'selected-suggestion'}}" {{action "selectItem" result}}>
+          {{yield result userInput}}
+        </li>
+      {{else}}
+        <li class="message" {{action "clickMessage"}}>
+          <p>
+            {{#if (hasBlock "inverse")}}
+              {{yield to="inverse"}}
+            {{else}}
+              No results.
+            {{/if}}
+          </p>
+        </li>
+      {{/each}}
+      {{#if hasSuggestions}}
+        {{#if canLoadMore}}
+          {{#if isLoadingAdditionalSuggestions}}
+            <li>{{ember-spinner lines=9 length=12 radius=20 scale=0.25 width=13 rotate=0 speed='1'}}</li>
+          {{/if}}
+            <div class="infinity-loader"></div>
+        {{/if}}
+      {{/if}}
+    {{/if}}
+  </ul>
+</div>
+{{/if}}

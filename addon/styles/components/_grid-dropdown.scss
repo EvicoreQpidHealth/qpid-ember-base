@@ -1,0 +1,72 @@
+.edit-menu {
+  width: 210px;
+  text-align: left;
+  margin-top: 11px;
+
+  &.f-dropdown:after,
+  &.f-dropdown:before {
+    display: none;
+  }
+
+  li a {
+    padding: 0.75rem;
+  }
+
+  i, a {
+    vertical-align: middle;
+  }
+
+  li.disabled i {
+    opacity: 0.4;
+  }
+  li.disabled a {
+    color: #aaa;
+  }
+  &.f-dropdown li.disabled:hover {
+    background-color: transparent;
+    color: #555;
+  }
+
+  i {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 0.75rem;
+    background-image: url("/qpid-shared-2/assets/edit-mode-icon-sprite.svg");
+    background-size: 242px 24px; //cover; 242px
+    background-repeat: no-repeat;
+  }
+  li .addItem i {
+    background-position: -24px 0;
+  }
+  li .editSectionName i {
+    background-position: 0 0;
+  }
+  li .addAbove i {
+    background-position: -48px 0;
+  }
+  li .addBelow i {
+    background-position: -72px 0;
+  }
+  li .addLeft i {
+    background-position: -95px 0;
+  }
+  li .addRight i {
+    background-position: -120px 0;
+  }
+  li .deleteRow i {
+    background-position: -146px 0;
+  }
+  li .deleteColumn i {
+    background-position: -170px 0;
+  }
+  li .deleteSection i {
+    background-position: -194px 0;
+  }
+  li .editCardOrder i {
+    background-position: -218px 0px;
+  }
+  li .none i {
+    background-image: none;
+  }
+}

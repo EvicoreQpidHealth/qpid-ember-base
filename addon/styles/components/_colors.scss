@@ -1,0 +1,12 @@
+
+.primary-color {
+  @include themify {
+    color: theme-get(primary-color)
+  }
+}
+
+.secondary-color {
+  @include themify {
+    color: theme-get(secondary-color)
+  }
+}

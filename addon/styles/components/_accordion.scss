@@ -1,0 +1,35 @@
+/* For the accordion component TODO: cleanup */
+ul.accordion {
+  line-height: inherit;
+}
+
+.accordion-navigation .card.test-section-toggle  {
+  @include themify {
+    text-transform: uppercase;
+    background-color: theme-get(background-color);
+    color: theme-get(header-color);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @if (theme-get(name) == 'carriersweb') {
+      font-weight: bolder;
+      border: none;
+    }
+
+    .heading {
+      color: theme-get(header-color);
+
+      @if (theme-get(name) == 'carriersweb') {
+        text-transform: none;
+        font-size: 0.8rem;
+      } @else {
+        font-size: theme-get(header-font-size);
+      }
+    }
+
+    &:hover {
+      background-color: #fafafa;
+    }
+  }
+}

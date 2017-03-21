@@ -1,0 +1,463 @@
+# 3.10.55
+* QD-80 tweaks to evidence components to reflect total amount 
+
+# 3.10.54
+* QD-136 initial notification widget work, and editing the header to fit
+
+# 3.10.53
+* QD-11044 create helper to correct invalid html ID and Name strings
+
+# 3.10.52
+* QED-80 refactoring counts
+
+# 3.10.51
+* QED-138 modifying header to allow more space for title, and truncate + tooltip overflowing text
+
+# 3.10.50
+* QED-72 create fallback for if the user has chosen nothing to sort by.
+
+# 3.10.49
+* QED-80 give checkbox-group ability to allow only 1 checked item per group. Allow filtering while grouping.
+
+# 3.10.48
+* QED-158 Use "firm" style with main-nav component
+
+# 3.10.47
+* Make sidebar show loading spinner when loading new groups, testing bug fixes
+
+# 3.10.46
+* toggle-switch component uses foundation switch to send toggle action
+
+# 3.10.45
+* hover-tooltip component to reveal foundation tooltip on hover
+
+# 3.10.44
+* QED-80 Make sortDefault properties optional in grouping:useSettingsFromDisplay function
+
+# 3.10.43
+* QED-80 grouping dropdowns should not trigger a new request if the user clicks the already selected option
+
+# 3.10.42
+* QED-71 Remove layout import from q-base component
+
+# 3.10.41
+* QD-10986 adding components and helpers for grouping
+
+# 3.10.40
+* update qpid-spinner to remove htmlSafeString deprecation warning
+
+# 3.10.39
+* made qpid-spinner configurable
+* simple-table enhanced to use icons for table headers and are also clickable
+
+# 3.10.38
+* simple-infinite-scroll component uses is-visible mixin to sendActions
+
+# 3.10.37
+* is-visible mixin triggers actions on entering/exiting the viewport
+
+# 3.10.36
+* added block params to hover-edit component
+
+# 3.10.35
+* simple-table component
+
+# 3.10.34
+* simple-search-bar component
+* updated liquid-fire and ember-try dependencies for breaking ember 2.8 release
+
+# 3.10.33
+* QD-11140 Add confirm-dialog component
+
+# 3.10.32
+* Allow map-editor component to display in locked mode
+
+# 3.10.31
+# QD-11110
+
+# 3.10.30
+# QC-253 Fixed filter action.
+# Fix for 'Search...' placeholder to fit in search bar.
+
+# 3.10.29
+# QD-10986 Adding checkbox-group and checkbox-group-dropdown components
+# Fixing issues in q-dropdown
+
+# 3.10.28
+# Removing unused Ember import from test case.
+
+# 3.10.27
+# QD-10986 Adding new helpers: turn array into comma-separated-string, and find-by
+
+# 3.10.26
+* Hack to make patient search component render correctly in Note Viewer
+
+# 3.10.25
+* Style updates
+
+# 3.10.24
+* autocomplete-list component wraps qpid-autocomplete and an editable list
+* qpid-autocomplete allows unsuggested values to be sent from the input field
+
+# 3.10.23
+* Add type 'component' for q-table-cell
+
+# 3.10.22
+* Fixed deprecation warning involving accessing session data
+
+# 3.10.21
+* dropdown-layout-switcher now adds truncate class to defaultText
+* fixed error logging in q-base component
+
+# 3.10.20
+* Skip the test from 3.10.19 when running on release build of Ember since it doesn't affect versions >= 2.
+* Bumped `liquid-fire` to 0.24.1 to fix failed test on release build of Ember
+* radio-button-list component to create radio group of buttons given array of options
+
+# 3.10.19
+* Add warning to let others know Ember.computed.mapBy doesn't always work
+
+# 3.10.18
+* make the q-dropdown repositioning function over-rideable, since we may want to reposition differently for different components
+
+# 3.10.17
+* Moved the menu button in main-nav-bar to the same column as the app-title
+* Removed the second q-dropdown test for now. Its implementation requires a dropdown component as well.
+
+# 3.10.16
+* Options to style dropdown-layout-switcher via custom classes
+* Added .no-hover class to remove hover effect from links, if desired
+
+# 3.10.15
+* Enhance qpid-autocomplete to allow for multiple autocompletes in one view
+* Enhance qpid-autocomplete - enter exits out of the textarea
+
+# 3.10.14
+* Allow app-search-patient drop-down to selectively display site
+
+# 3.10.13
+* dropdown-layout-switcher component to switch layouts via a dropdown (q-dropdown)
+
+# 3.10.12
+* Add more options to q-dropdown
+
+# 3.10.11
+* qpid-autocomplete gets useTextArea and allowUnsuggestedValues options
+
+# 3.10.10
+* QD-10873 adding: base, generic dropdown, grid dropdown, and hover hotspot components
+
+# 3.10.9
+* added class for width inheritance
+
+# 3.10.8
+* same version as 3.10.7
+
+# 3.10.7
+* make code-mirror look more like a code-editor
+* styling changes from brian
+
+# 3.10.6
+* Add preferences to main nav
+
+# 3.10.5
+* Add ability to copy text to the clipboard programmatically via user action
+
+# 3.10.4
+* Fix autocomplete with proper enter press
+* q-table-cell with select
+* codemirror fix autocomplete, style updates
+* up/down transition update
+* increment helper added
+
+# 3.10.3
+* Remove default width from card column, streamline code to not include so many handlebars ifs
+
+# 3.10.2
+* fix card column defaults
+
+# 3.10.1
+* qitl syntax updates
+* card-column takes configurable medium width
+
+# 3.10.0
+* bumped up ember-cli to 1.13.15
+
+# 3.9.8
+* evidence-group allows left and right scrolling through patients
+
+# 3.9.7
+* q-table passes up cleaner filters
+
+# 3.9.6
+* QITL new keywords
+* toggle-button attrs change
+* q-table passes state in actions
+
+# 3.9.5
+* autocomplete supports clicking on the no results text
+* QITL ingest language highlighting and codemirror support
+
+# 3.9.4
+* QD-10539: Autocomplete search update to better reflect current loading state
+
+# 3.9.3
+* Fixed preserve whitespace to wrap properly
+
+# 3.9.2
+* added tooltip to column names
+
+# 3.9.1
+* rename sort & filter table options to sortable & filterable
+* fix resize table event to off on destroy
+
+# 3.9.0
+* Extended q-table to allow sorting
+* fix overflow style bug
+
+# 3.8.15
+* Fixed progress bar and table overflow
+
+# 3.8.14
+* Added q-table filters
+
+# 3.8.13
+* Adding progress bar and tooltip components
+
+# 3.8.12
+* QD-10413: Tiny change for lo-rez: 1280x1024 and smaller
+
+# 3.8.11
+* QD-10413: 1. last name, first name. 2. MM-DD-YYYY
+
+# 3.8.10
+* QD-10460: '< Back' should pull-left
+
+# 3.8.9
+* QD-10417: Adding ability to save scroll position between transitions
+
+# 3.8.8
+* q-table infiniscroll fix
+* modal non bubbling option
+
+# 3.8.7
+* styling changes used in quality including updated modal
+
+# 3.8.6
+* QD-10460: full doc view is fully capitalized, with other changes
+
+# 3.8.5
+* callback option for evidence toggle
+
+# 3.8.4
+* styles new cards for attestation
+
+# 3.8.3
+* styling changes used in quality
+
+# 3.8.2
+* q-table gets infinite scroll capability
+
+# 3.8.1
+* QD-10360: manage "bad" data coming back from the back-end
+
+# 3.8.0
+* Adds error-stacktrace component and environment mixin from portal
+
+# 3.7.2
+* toggle-cells for table
+* hover edit icon change
+* styles for secondary color and medium fa icon
+
+# 3.7.1
+* more style tweaks
+
+# 3.7.0
+* brian restyled things
+
+# 3.6.7
+* added map-editor component
+
+# 3.6.6
+* fix to highlight when startOffset = 0
+
+# 3.6.5
+* Disable autocomplete enter selection if suggestions are loading.
+* fix enter select when using arrowkeys/enter
+
+# 3.6.4
+* Queue autocomplete responses to deal with slow responses.
+* Re-enable "enter selects 1st item" behavior.
+
+# 3.6.3
+* Adds a toggle-button component
+
+# 3.6.2
+* Require users to select an item in autocompletes via arrow down + enter or the mouse. Fixes a potential issue where wrong patients could be selected in the patient list until we can implement canceling pending requests for autocomplete suggestions.
+
+# 3.6.1
+* bump up debounce times to help deal with latency returning search results. autocompletes default to 400ms now, and app search will use 750ms.
+
+# 3.6.0
+* Logout goes to logout route instead of using action
+
+# 3.5.1
+* style tweaks for evidence and cards
+* disabled button style
+* allowEdit flag for main nav to show edit button
+
+# 3.5.0
+* highlighted text should maintain the original case
+
+# 3.4.3
+* Updated slicing logic to pull patch
+
+# 3.4.2
+* Style updates and additional tests added for app versioning
+
+# 3.4.1
+Fixes issues determining version when on git master / detached HEAD
+* Support APP_VERSION env variable as a way to force-set version. Failing that, version falls back to tag, then branch, then directory.
+* Fallback to git binary for date if we can't determine from repo info.
+
+# 3.4.0
+* Add app-info mixin to handle actions from app-info component.
+
+# 3.3.1
+* use fully qualified github url for git-repo-info.
+
+# 3.3.0
+* Adds app-info component that displays git version
+* Adds initializer that injects the git information to the app-info component.
+* Adds modal-dialog component
+* Updates main nav to have an about link
+
+# 3.2.0
+* Autocomplete updates
+  * Adds bold highlight of word match
+  * Fixes issues with fancy search focusOut behavior, replace with explicit click/tab listeners
+  * Removes delay on fancy search cancel / blur
+  * Adds formatter options to app search to format display in a way that doesn’t match an autocomplete option.
+  * Autocomplete now handles strings or objects
+  * Set suggestions in autocomplete to selectedValue by default
+  * avoid rounding errors in tests on tab follower position calculations
+  * fancy search width is calculated from placeholder if input is not present
+  * don’t show suggestions if 0 length input
+  * add placeholder mixin to style input placeholders
+* Add Babel polyfill to support bind
+
+# 3.1.1
+* style fixes to the evidence view components
+* fix no-highlight snippet and doc case
+
+# 3.1.0
+* Allows for greater flexibility with app search
+  * Moves app search results template to standalone component for flexibility
+  * App search results default to table with patient name, MRN and DOB
+  * Main nav now yields so that consuming app can provide app search (or something else) directly
+* bump ember suave dependency since it was throwing errors in tests
+
+# 3.0.14
+* add a multi-select option to the q-accordion component
+
+# 3.0.13
+* back-link block component option
+* hover edit showIcon option
+
+# 3.0.12
+* added conditional for showing load more evidence button
+
+# 3.0.11
+* fix to pinning criteria
+* tweak to QD-9919 param naming
+
+# 3.0.10
+* two new helpers added -alvin
+* added ability to order evidence cards -yared
+
+# 3.0.9
+* QD-9919
+* User enters patient name (or part of patient name) in search and sees patient name + MRN, e.g. DOE, JOHN - 123456.
+* User enters MRN in search and sees patient name + MRN, e.g. DOE, JOHN - 12345.6
+* User selects John Doe patient and sees, at the top of the portal, John Doe - 123456 DOB: 1/1/1945
+* Values returned from search narrow down choices as more inputs are entered (currently in place).
+* Search pulldown is table-like with NAME, MRN and DOB for a heading
+* Blank field instead of the current patient info when uset hits the search
+
+# 3.0.8
+* admin styling
+* select input on autocomplete select
+* main-nav: allow title and search
+to show + a new text centering option
+* autocomplete click fix
+
+# 3.0.7
+* updated default placeholder search text
+
+# 3.0.6
+* moved colorbrewer into vendor because the bower package wasn't working
+
+# 3.0.5
+* added google fonts for Lato
+
+# 3.0.4
+* don't show author if there is no author
+
+# 3.0.3
+* added author to evidence
+* fix for ember-select matching + make ember-select a block component
+
+# 3.0.2
+* fix counts outside cards
+* color utilities for getting a consistent cord tag for a string
+* move main-nav component in from qpid-portal
+* accordion fixes for resizing
+
+# 3.0.0
+* reorganized qpid-base and qpid-shared moving all components into qpid-shared
+and moving out all models/serializers/adapters/transforms into qpid-base
+
+# 2.5.0
+* Added the ability to load more evidence
+
+# 2.4.0
+* Add q-accordion component.
+
+# 2.3.0
+* Add q-tabs component.
+
+# 2.2.0
+* Add keyed util, updates to app search, fancy search and autocomplete
+* Removes fancy-search-autocomplete in favor of a block option to fancy-search
+* Renames search-input to debounced-input.
+
+# 2.1.3
+ * added attestable evidence column and cards
+ * fixed several endpoint issues
+
+# 2.1.2
+ * case-insensitive patient search
+
+# 2.1.1
+ * new fetcher for free text
+ * query fetcher accepts assertion status as an argument
+ * update ember and qunit
+
+# 2.1.0
+
+* Updates evidence view and fancy search.
+  * evidence view can now be passed the evidence data to render rather than just currentDisplay.
+  * changed fancy-search to explicitly pass the search text to the itemSelected closure action
+  * adds ember-suave back as a dependency until we can work out the nested addon imports.
+  * imports Ember in evidence display
+  * Add basic integration test for evidence view.
+
+* add and point liquid fire to master for now to avoid jshint failures
+* clean up evidece-view a little via destructuring and no prototype extensions.
+
+
+# 2.0.3
+
+* Adds a version model
+* Adds qpid-passthrough function for mirage to setup basic QPID passthrough logic
+* Starts the CHANGELOG

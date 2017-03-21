@@ -1,0 +1,23 @@
+.fancy-search {
+  .auto-width {
+    margin: 0 auto;
+  }
+
+  input {
+    width: 100% !important;
+  }
+
+  &.dark {
+    input {
+      // dark input has no background until focused, so show a pointer
+      cursor: pointer;
+      @include placeholder(#A2A5DB);
+
+      &:focus {
+        cursor: auto;
+        @include placeholder(#6063A3);
+      }
+
+    }
+  }
+}

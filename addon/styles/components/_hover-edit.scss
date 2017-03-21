@@ -1,0 +1,56 @@
+.hover-edit {
+  margin: 1px;
+  padding: 0.55rem 0.6rem 0.6rem 0.55rem;
+  cursor: text;
+  border: 0.1rem solid transparent;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.hover-edit.full {
+  display: inline-block;
+  width: 100%;
+}
+
+.hover-edit.small {
+  padding: 0;
+}
+
+.hover-edit:hover {
+  border: 0.1rem solid #eee;
+}
+
+ul.hover-edits li {
+  margin: 0.5rem;
+}
+
+.hover-edit-input.small input[type=text] {
+  width: 6rem;
+  padding: 0.25rem;
+}
+
+.hover-edit-input.full input[type=text] {
+  display: inline-block;
+  width: 100%;
+  padding: 0.25rem;
+}
+
+.hover-edit.has-icon,
+.hover-edit.has-icon:hover {
+  cursor: default;
+  border: 0.1rem solid transparent;
+}
+
+.fill-parent .hover-edit-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.fill-parent .hover-edit-input input[type="text"] {
+  width: 100%;
+  height: 100%;
+}

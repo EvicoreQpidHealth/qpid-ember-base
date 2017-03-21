@@ -1,0 +1,7 @@
+<div class="reveal-modal-bg" {{action 'closeModal' bubbles=false}}></div>
+<div class="reveal-modal {{modalClassNames}} {{bubblingActionText}}">
+  <h3>{{title}}</h3>
+  {{yield}}
+  <button class="outline-only right" aria-label="No" {{action "onConfirmNo" bubblesText}}>No</button>
+  <button class="right" aria-label="Yes" {{action "onConfirmYes" bubblesText}}>Yes</button>
+</div>

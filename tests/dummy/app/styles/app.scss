@@ -1,0 +1,31 @@
+
+.outer-container {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.navbar {
+  background: #ddd;
+  min-height: 100%;
+
+  ul {
+    padding: 10px;
+    list-style: none;
+  }
+
+  li {
+    margin: 0;
+    padding: 0;
+  }
+
+  h5 {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: #999;
+    margin-top: 20px;
+  }
+}
+
+.main {
+  padding: 20px;
+}

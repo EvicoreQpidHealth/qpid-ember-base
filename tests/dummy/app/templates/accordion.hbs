@@ -1,0 +1,11 @@
+{{#q-accordion
+  activeSection=model.activeSection
+  onActivateSection=(action 'activateAccordionSection') as |group|}}
+
+  {{#accordion-section id='item1' title='Item 1' group=group}}
+    Item 1
+  {{/accordion-section}}
+  {{#accordion-section id='item2' title='Item 2' group=group}}
+    Item 2
+  {{/accordion-section}}
+{{/q-accordion}}

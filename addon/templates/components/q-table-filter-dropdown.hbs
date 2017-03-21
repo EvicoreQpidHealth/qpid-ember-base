@@ -1,0 +1,18 @@
+<div id="{{elementName}}"
+  class="tooltip f-dropdown content {{dropdownClasses}}"
+  data-dropdown-content
+  data-options="align:bottom"
+  aria-hidden="false"
+  aria-autoclose="false"
+  tabindex="-1">
+
+  {{#if (eq type 'raw-toggle')}}
+    <div class="button-group round">
+      <span><button {{action "unsetFilter"}} class="{{if filterUnset "" "outline-only"}}">All</button></span>
+      <span><button {{action "setFilter" true}} class="{{if filter "" "outline-only"}}">True</button></span>
+      <span><button {{action "setFilter" false}} class="{{if (eq filter false) "" "outline-only"}}">False</button></span>
+    </div>
+  {{else}}
+    {{input class="full-width" placeholder="Filter Text..." value=filter enter="saveFilter"}}
+  {{/if}}
+</div>

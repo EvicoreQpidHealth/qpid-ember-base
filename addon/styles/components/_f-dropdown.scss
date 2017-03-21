@@ -1,0 +1,64 @@
+.f-dropdown {
+  outline: none;
+  min-width: 240px;
+  max-width: 320px;
+}
+
+.f-dropdown.x-large {
+  min-width: 1200px;
+}
+
+.f-dropdown .count {
+  font-weight: 100;
+  font-size: 2.5rem;
+  letter-spacing: .1rem;
+  line-height: 2rem;
+  vertical-align: middle;
+  margin-right: .75rem;
+  opacity: 1;
+}
+.f-dropdown .heading {
+  color: #999;
+  font-size: .7rem;
+  font-weight: bold;
+  letter-spacing: .3rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+.f-dropdown .description {
+  font-weight: 300;
+  font-size: .8rem;
+  letter-spacing: .1rem;
+  line-height: 1rem;
+}
+.f-dropdown .success {
+  color: $progress-meter-success-color;
+}
+
+.filter-trigger {
+  padding-right: 1rem;
+}
+
+.f-dropdown {
+  -moz-box-shadow:0px 4px 8px rgba(0,0,0,0.33);
+  -webkit-box-shadow:0px 4px 8px rgba(0,0,0,0.33);
+  box-shadow:0px 4px 8px rgba(0,0,0,0.33);
+  -ms-filter:"progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=4,Color=#54000000,Positive=true)";
+  filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=4,Color=#54000000,Positive=true);
+  line-height: 3rem;
+}
+
+.f-dropdown li a {
+  font-size: 1rem;
+  text-transform: none;
+  letter-spacing: 0;
+  padding: 1rem;
+}
+
+.f-dropdown li:hover, .f-dropdown li:focus {
+  background: rgba($primary-color, 0.1);
+}
+
+.tt-dropdown-menu .message p {
+  line-height: 2.5em;
+}

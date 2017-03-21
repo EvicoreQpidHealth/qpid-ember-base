@@ -1,0 +1,32 @@
+/*******************************************************************************
+ ** Code Mirror
+ ******************************************************************************/
+
+.CodeMirror {
+  min-height: 3rem;
+  height: auto;
+}
+
+.full-code .CodeMirror {
+  height: 100% !important;
+}
+
+.CodeMirror * {
+  font-family: monospace !important;
+}
+
+.CodeMirror-hint {
+  max-width: 40em;
+}
+
+.editor-error {
+  border: 5px solid red;
+}
+
+.code-error .CodeMirror {
+  border: 1px solid red;
+}
+
+.CodeMirror-gutters {
+  height: 100% !important;
+}

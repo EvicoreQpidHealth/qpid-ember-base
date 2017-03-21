@@ -1,0 +1,22 @@
+.margin-group {
+  $border: 1px solid #ddd;
+
+  margin: 0.75rem;
+  border-radius: $global-radius;
+  box-shadow: -2px 0 6px rgba(0, 0, 0, 0.05),
+               2px 0 6px rgba(0, 0, 0, 0.05);
+  border: $border;
+  overflow: hidden; // to enforce rounded corners on bottom with or without footer
+
+  .header {
+    border-top: none;
+  }
+  .footer a {
+    letter-spacing: .15em;
+  }
+}
+
+.collapsible-evidence-group {
+  border-top: 0.1rem solid rgba(0, 0, 0, 0.15);
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.15);
+}

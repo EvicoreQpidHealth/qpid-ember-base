@@ -1,0 +1,121 @@
+
+
+.main-table {
+  position: relative;
+
+  &-padding {
+    overflow-y: auto;
+    overflow-x: visible;
+  }
+  &-bar {
+    height:3rem;
+    background-color: $body-bg;
+  }
+  th {
+    padding:0;
+    margin:0
+  }
+  thead,thead tr,thead tr th {
+    border:0
+  }
+
+  .th-content {
+    position:absolute;
+    top:0;
+    padding:1rem 0 1rem .625rem;
+    display:inline-block;
+    font-weight: 400;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    min-width:5rem;
+    text-transform: uppercase;
+    font-size: .8rem;
+    letter-spacing: .15rem;
+    color: #999;
+    &.small {
+      max-width:1rem;
+    }
+    &.medium {
+      max-width:15rem
+    }
+  }
+
+  table {
+    overflow-y: auto;
+    overflow-x: visible;
+    margin:0;
+    width:100%;
+    border-color: $border-color;
+    border-collapse:collapse;
+    border-left:0;
+    border-right:0
+  }
+
+}
+
+
+table {
+  @include themify {
+    input[type=checkbox] {
+      margin:.25rem
+    }
+    thead {
+      background-color: theme-get(primary-color);
+      th {
+        color: white;
+        border: 1px solid white;
+      }
+    }
+    tbody tr td, tr td {
+      font-size: 1rem;
+      line-height:2.5rem
+    }
+    td {
+      overflow:hidden;
+      text-overflow:ellipsis;
+      white-space:nowrap;
+      min-width:5rem;
+      &.small {
+        max-width:1rem;
+      }
+      &.medium {
+        max-width:15rem
+      }
+      &.delete-button {
+        padding: 0.2rem 0.5rem 0.2rem 0.7rem;
+      }
+    }
+    tr {
+      cursor: pointer;
+      transition: .2s background;
+      &.selected,&.even.selected,&.alt.selected,&:nth-of-type(even).selected {
+        background-color:#DAEDFB;
+      }
+      &:hover {
+        background: rgba($primary-color, 0.1) !important;
+        transition: 0.2s;
+      }
+      &.even, &.alt, &:nth-of-type(even) {
+        background: rgba($body-bg, 0.5);
+      }
+    }
+  }
+}
+
+.filtered-col-name {
+  margin-left: -0.5rem;
+}
+
+.column-icons {
+  min-width: 3rem;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.column-name {
+  display: inline-block;
+  width: calc(100% - 3rem);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

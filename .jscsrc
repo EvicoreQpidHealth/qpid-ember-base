@@ -1,0 +1,7 @@
+{
+  "preset": "ember-suave",
+  "requireCommentsToIncludeAccess": false,
+  "disallowDirectPropertyAccess": false,
+  "requireSpread": false,
+  "disallowConstOutsideModuleScope": false
+}

@@ -1,0 +1,50 @@
+<!-- Number of columns needs to add up to 12 -->
+{{#if result.isHeader}}
+  <div class="row">
+    {{#if showSite}}
+    <div class="columns medium-4 small-padding header">
+      Patient Name
+    </div>
+    <div class="columns medium-3 small-padding header">
+      MRN
+    </div>
+    <div class="columns medium-3 small-padding header">
+      Site
+    </div>
+    {{else}}
+    <div class="columns medium-5 small-padding header">
+      Patient Name
+    </div>
+    <div class="columns medium-5 small-padding header">
+      MRN
+    </div>
+    {{/if}}
+    <div class="columns medium-2 small-padding header">
+      DOB
+    </div>
+  </div>
+{{else}}
+  <div class="row">
+    {{#if showSite}}
+    <div class="columns medium-4">
+      {{highlightedName}}
+    </div>
+    <div class="columns medium-3">
+      {{highlightedIdentifier}}
+    </div>
+    <div class="columns medium-3">
+      {{highlightedSite}}
+    </div>
+    {{else}}
+    <div class="columns medium-5">
+      {{highlightedName}}
+    </div>
+    <div class="columns medium-5">
+      {{highlightedIdentifier}}
+    </div>
+    {{/if}}
+    <div class="columns medium-2">
+      {{formattedDob}}
+    </div>
+  </div>
+{{/if}}

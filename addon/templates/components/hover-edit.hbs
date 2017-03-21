@@ -1,0 +1,38 @@
+{{#if editing}}
+    <span class='hover-edit-input {{if small 'small'}} {{if fullWidth 'full'}}'>
+    {{input id=inputId value=value placeholder=placeholder
+        enter="stopEditing" focus-out="stopEditing" escape-press='cancelEditing' class="inline"}}
+    </span>
+{{else}}
+
+    {{#if showIcon}}
+      <span class="hover-edit has-icon {{if small 'small'}} {{if fullWidth 'full'}}" >
+        {{#if value}}
+          {{value}}
+
+        {{else}}
+          {{placeholder}}
+        {{/if}}
+
+        <a class="float-right" {{action 'startEditing' bubbles=false}}>{{fa-icon icon='pencil'}}</a>
+      </span>
+
+    {{else}}
+      {{#if hasBlock}}
+        <span class='hover-edit {{if small 'small'}} {{if fullWidth 'full'}}' {{action 'startEditing' bubbles=false}}>
+        {{yield value}}
+        </span>
+
+      {{else}}
+        <span class="hover-edit {{if small 'small'}} {{if fullWidth 'full'}}" {{action 'startEditing' bubbles=false}}>
+          {{#if value}}
+            {{value}}
+
+          {{else}}
+            {{placeholder}}
+          {{/if}}
+        </span>
+      {{/if}}
+    {{/if}}
+
+{{/if}}

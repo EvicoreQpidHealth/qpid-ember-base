@@ -1,0 +1,13 @@
+{{#if isDevelopment}}
+  <div class="stacktrace">
+    <hr />
+    <h3>You're running in development mode, here's some more info:</h3>
+
+    {{#each model.errors as |error|}}
+      <h2>{{error.title}} - status: {{error.status}}</h2>
+      {{{error.detail}}}
+    {{/each}}
+
+    <p>{{model.stack}}</p>
+  </div>
+{{/if}}

@@ -1,0 +1,81 @@
+<div class="td-content">
+  {{#if transform}}
+
+    {{#if (eq type 'date')}}
+      {{moment-format cellData format}}
+    {{/if}}
+
+    {{#if (eq type 'html')}}
+      {{{cellData}}}
+    {{/if}}
+
+    {{#if (eq type 'check')}}
+      {{#if cellData}}
+        <div class="fa fa-check-square-o"></div>
+      {{else}}
+        <div class="fa fa-square-o"></div>
+      {{/if}}
+    {{/if}}
+
+    {{#if (eq type 'button')}}
+      <a class="inline-link" {{action "buttonAction" bubbles=false}}>{{cellData}}</a>
+    {{/if}}
+
+    {{#if (eq type 'component')}}
+      {{component componentName data=cellData}}
+    {{/if}}
+
+    {{#if (not type)}}
+      {{cellData}}
+    {{/if}}
+
+  {{else}}
+
+    {{#if (eq type 'date')}}
+      {{moment-format (get data field) format}}
+    {{/if}}
+
+    {{#if (eq type 'html')}}
+      {{{get data field}}}
+    {{/if}}
+
+    {{#if (eq type 'check')}}
+      {{#if (get data field)}}
+        <div class="fa fa-check-square-o"></div>
+      {{else}}
+        <div class="fa fa-square-o"></div>
+      {{/if}}
+    {{/if}}
+
+    {{#if (eq type 'raw-toggle')}}
+      {{#if (and (get data field) (not (eq (get data field) 'false')))}}
+        {{{args.toggleTrue}}}
+      {{else}}
+        {{{args.toggleFalse}}}
+      {{/if}}
+    {{/if}}
+
+    {{#if (eq type 'button')}}
+      <a class="inline-link" {{action "buttonAction" bubbles=false}}>{{get data field}}</a>
+    {{/if}}
+
+    {{#if (eq type 'editable')}}
+      {{hover-edit value=(get data field) change="change"}}
+    {{/if}}
+
+    {{#if (eq type 'select')}}
+      {{#ember-select selectedValue=(get data field) content=args.content change="updateAction" as |item|}}
+        {{item}}
+      {{/ember-select}}
+    {{/if}}
+
+    {{#if (eq type 'component')}}
+      {{component componentName data=data additionalParams=componentParams}}
+    {{/if}}
+
+    {{#if (not type)}}
+      {{get data field}}
+    {{/if}}
+
+  {{/if}}
+</div>

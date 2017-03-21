@@ -1,0 +1,105 @@
+/*******************************************************************************
+ ** Edit Mode
+ ******************************************************************************/
+
+ // Edit Mode Style Changes (note: change below wrapper class to ".editing")
+
+ .editing {
+
+  a {
+    color: #CE5161;
+  }
+
+   // Header
+   .tab-bar {
+     background: $edit-primary-color;
+   }
+
+   .sub-top-bar p {
+     color: $edit-primary-color;
+   }
+
+   .search-input-wrapper input[type=text]:focus {
+      background: darken(#CE5161, 6%) !important;
+     border-color: darken(#CE5161, 2%) !important;
+   }
+
+
+   /*******************************************************************************
+    ** Table
+    ******************************************************************************/
+
+   table tr:hover {
+     background: rgba($edit-primary-color, 0.15) !important;
+   }
+
+   table tr.alt.selected, table tr.even.selected, table tr:nth-of-type(even).selected, tr.selected {
+     background: rgba($edit-secondary-color, 0.05) !important;;
+   }
+
+   /*******************************************************************************
+    ** Button
+    ******************************************************************************/
+
+   button.outline-only {
+     color: $edit-secondary-color;
+     border-color: $edit-primary-color;
+   }
+
+  button.outline-only:hover {
+    background-color: rgba($edit-primary-color, 0.1);
+  }
+
+  .button-text a {
+    color: $edit-secondary-color;
+  }
+
+  button, button:hover, button:focus, .button:hover, .button:focus {
+    background: $edit-secondary-color;
+    border-color: $edit-primary-color;
+  }
+
+
+  ul.off-canvas-list li a:hover {
+    background: rgba($edit-primary-color, 0.35);
+  }
+
+  ul.off-canvas-list li a.active {
+    background: rgba($edit-primary-color, 0.75);
+  }
+
+  .f-dropdown li:hover, .f-dropdown li:focus, .programatic-highlight {
+    background: rgba($edit-primary-color, 0.15);
+  }
+
+  .programatic-highlight .card {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+
+  .card.small.selected, .active > .card.small, .card.force-small.selected, .active > .card.force-small {
+    background: #fff;
+    color: #222;
+    box-shadow: 0 0.05em 0.2em rgba(0, 0, 0, 0.25), inset 0 0 0 0.2rem $edit-secondary-color;
+  }
+
+
+  /*******************************************************************************
+   ** Tabs
+   ******************************************************************************/
+   .tabs dd > a:hover,.tabs .tab-title > a:hover {
+     color:$edit-primary-color;
+   }
+
+  .tab-follow {
+    border-bottom: 2px solid $edit-primary-color;
+  }
+
+ }
+
+.section-divider {
+  border-top: 1px solid #ccc;
+}
+
+.editing .reveal-modal .close-reveal-modal:hover {
+  color: $edit-primary-color;
+}

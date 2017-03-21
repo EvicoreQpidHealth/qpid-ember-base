@@ -1,0 +1,22 @@
+.checkbox-group {
+  margin-top:0;
+
+  li {
+    position: relative;
+    width: 50%;
+    float: left;
+    padding: $f-dropdown-list-padding;
+    user-select: none;
+  }
+  li:first-of-type, li:first-of-type + li {
+    padding-top: rem-calc(15);
+  }
+  .block-events {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+}

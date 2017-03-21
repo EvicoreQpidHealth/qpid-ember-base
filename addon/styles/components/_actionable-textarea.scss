@@ -1,0 +1,27 @@
+.actionable-textarea{
+    border: 1px solid #999;
+}
+.actionable-textarea textarea{
+    border:none;
+    resize: none;
+    box-shadow: none;
+    line-height: 1;
+}
+.actionable-textarea textarea:focus{
+    outline: none;
+}
+.controls{
+    text-align: right;
+    margin-top: -5px;
+    background: #f7f7f7;
+    border-top: 1px solid #999;
+}
+.actionable-textarea span{
+    background: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+    border-left: 1px solid #999;
+    padding: 0px 10px 0px 10px;
+    font-weight: bold;
+    color: #999;
+    text-transform: uppercase;
+    cursor: pointer;
+}

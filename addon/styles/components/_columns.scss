@@ -1,0 +1,226 @@
+/*******************************************************************************
+ ** Flex/Firm
+ ******************************************************************************/
+
+.flex-wrapper {
+  height: 100%;
+}
+
+/*******************************************************************************
+ ** Full Columns
+ ******************************************************************************/
+
+ .column, .columns {
+   padding-left: 0 !important;
+   padding-right: 0 !important;
+ }
+
+ .columns.transition {
+   transition: all 0.1s linear;
+ }
+
+ .column + .column:last-child, .columns + .column:last-child, .column + .columns:last-child, .columns + .columns:last-child {
+   float: left;
+ }
+
+.card-column {
+  border-right: 1px solid #ddd;
+}
+
+.card-column.animated {
+  transition: width 0.3s;
+}
+
+.card-column .card-column:last-child {
+  border-right: 0;
+}
+
+.card-column .nesting .card-column:last-child {
+  border-right: 1px solid #ddd;
+}
+
+.card-column .header, .card-column .sub-header, .card-column .main, .card-column .footer {
+  width: 100%;
+}
+
+.card-column .header, .card-column .sub-header, .card-column .footer {
+  @include themify {
+    color: theme-get(header-color);
+  }
+}
+
+.card-column .header, .card-column .sub-header {
+  border-bottom: 0.1rem solid #ddd;
+  padding: 0.75rem 1rem;
+  position: relative;
+}
+
+
+/* Brian's Version */
+.card-column .header, .card-column .sub-header {
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  font-size: 1rem;
+  // font-style: italic;
+  letter-spacing: 1px;
+  font-weight: normal;
+}
+
+.card-column .header,
+.card-column .sub-header {
+  @include themify {
+    font-style: initial;
+    font-size: theme-get(header-font-size);
+    letter-spacing: .12rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @if (theme-get('name') == 'carriersweb') {
+      border-bottom: none;
+      font-weight: bolder;
+      text-align: left;
+      text-transform: none;
+    } @else {
+      text-transform: uppercase;
+    }
+  }
+}
+
+.card-column .allow-overflow,
+.allow-overflow {
+  overflow: visible;
+}
+
+.card-column .sub-header.full-width {
+  margin: 0 -1rem;
+  width: auto;
+  max-width: none;
+}
+
+.card-column .header.tab-header, .card-column .sub-header.tab-sub-header {
+  border-bottom: 0.1rem solid #ddd;
+  padding: 0;
+}
+
+.card-column .header:empty, .card-column .sub-header:empty {
+  border-bottom: 0;
+  padding: 0;
+}
+
+.card-column .header input[type="text"] {
+  border: 0;
+  box-shadow: none;
+  font-size: 1rem;
+  height: 2.5rem;
+}
+
+.card-column .header input[type="text"]:focus {
+  background: #fff;
+}
+
+.card-column .header-text {
+  display: inline-block;
+  padding: 0.72rem 0 0.66rem;
+}
+
+.card-column .header-float-text {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0.5rem 0;
+}
+
+.card-column .header.has-tabs {
+    padding-bottom: 0;
+}
+
+.card-column .header .tabs {
+  margin: -0.5rem 0 -1.25rem;
+  border-bottom: 0;
+}
+
+.card-column .header .tabs .tab-title > a {
+  padding-top: 1.25rem;
+}
+
+.card-column .main {
+  overflow-y: scroll;
+}
+
+.card-column .main.overflow-visible {
+  overflow: visible;
+}
+
+.card-column .main.no-overflow {
+  overflow-y: hidden;
+}
+
+.card-column .footer {
+  border-top: 1px solid #ddd;
+  padding: 0.75rem 1rem;
+
+  button, .button {
+    @include themify {
+      margin: 0;
+    }
+  }
+}
+
+.card-column .footer.white-background {
+  border-top: 0;
+  background: #fff;
+}
+
+.card-column-title {
+  margin-top: 2em;
+  margin-left: 1em;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  color: #999;
+  font-weight: bold;
+}
+
+.main.under-tabs {
+    margin-top: 2px;
+
+    .card {
+      padding-top: 0;
+    }
+}
+
+input.card-column-input {
+  border-width: 0 0 1px 0;
+  border-color: #ddd;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 0.75rem;
+  height: auto;
+}
+
+input.card-column-input:focus {
+  border-color: #ddd;
+}
+
+.infinite-load-button {
+  width: 100%;
+  margin: 0;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.bg-pale-yellow {
+  background-color: #FFFFE0;
+}
+
+.resize-space {
+  position:absolute;
+  width:1rem;
+  margin-right:-1rem;
+  cursor:w-resize;
+  z-index:10;
+  top: 0;
+  right: 0.5rem;
+}

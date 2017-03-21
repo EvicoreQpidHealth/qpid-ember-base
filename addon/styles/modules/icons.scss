@@ -1,0 +1,87 @@
+/*******************************************************************************
+ ** Icons
+ ******************************************************************************/
+
+.fa-1_3x {
+  font-size: 1.3rem;
+}
+
+.criteria-text {
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+.encounter-text {
+  @extend .criteria-text;
+  color: rgb(22, 143, 181);
+}
+
+.medication-text {
+  @extend .criteria-text;
+  color:rgb(105, 143, 196);
+}
+
+.lab-text {
+  @extend .criteria-text;
+  color:rgb(84, 190, 229);
+}
+
+.patient-text {
+  @extend .criteria-text;
+  color:rgb(29, 187, 163);
+}
+
+.demographic-text {
+  @extend .criteria-text;
+  color:rgb(29, 187, 163);
+}
+
+.problem-text {
+  @extend .criteria-text;
+  color: rgb(198, 86, 103);
+}
+
+.diagnosis-text {
+  @extend .criteria-text;
+  color: rgb(198, 86, 103);
+}
+
+.procedure-text {
+  @extend .criteria-text;
+  color: rgb(106, 103, 195);
+}
+
+.criteria-icon {
+  width: 80%;
+  max-width: 3em;
+}
+
+.icon-padding {
+  padding: 0.25rem;
+}
+
+.lighten {
+  opacity: .66;
+}
+
+
+/*******************************************************************************
+ ** x icon
+ ******************************************************************************/
+
+.fa-larger .fa {
+  font-size: 1.5em;
+  line-height: 0.666;
+}
+
+.fa.close:hover {
+  color: $alert-color;
+}
+
+.close {
+  color: $alert-color;
+}
+
+.fa-lock, .fa-unlock {
+  margin: 0 2px;
+}

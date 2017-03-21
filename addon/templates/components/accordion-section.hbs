@@ -1,0 +1,33 @@
+<div class="flex-wrapper">
+  <div class="test-section-toggle card full-width firm" {{action 'setActive'}} title="{{title}}">
+    {{#if isActive}}
+      {{fa-icon icon="chevron-down"}}
+    {{else}}
+      {{fa-icon icon="chevron-right"}}
+    {{/if}}
+
+    <span class="heading">
+      {{title}}
+    </span>
+  </div>
+
+  {{#if animate}}
+    <div class="{{if isActive flex}}">
+      {{#liquid-if isActive}}
+        <div class="content active collapse-group">
+          <div class="full-height vertical-overflow">
+            {{yield}}
+          </div>
+        </div>
+      {{/liquid-if}}
+    </div>
+  {{else}}
+    {{#if isActive}}
+      <div class="content active collapse-group flex">
+        <div class="full-height vertical-overflow">
+          {{yield}}
+        </div>
+      </div>
+    {{/if}}
+  {{/if}}
+</div>

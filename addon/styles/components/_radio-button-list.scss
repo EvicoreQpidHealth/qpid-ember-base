@@ -1,0 +1,8 @@
+label.radio-button {
+  input[type='radio'] {
+    -webkit-appearance: none !important;
+    -moz-appearance:    none !important;
+    appearance:         none !important;
+    display: none;
+  }
+}

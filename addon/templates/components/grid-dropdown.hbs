@@ -1,0 +1,35 @@
+{{yield}}
+
+{{#q-dropdown
+  id=ddId
+  useCustomButton=true
+  class="edit-menu medium"}}
+  {{#each ddMenu key = "action" as |item|}}
+
+  {{#if item.disabled}}
+      <li data-tooltip aria-haspopup=true data-options="hover_delay: 500;" title={{item.tooltipText}} class='disabled'>
+       {{#q-hoverable
+          tagName="a"
+          class=item.cssClass
+          action=item.action
+          hoverOver="componentMouseEnter"
+          hoverOff="componentMouseLeave"
+          disabled=true}}
+          <i class="q-icon"></i>{{item.label}}
+        {{/q-hoverable}}
+      </li>
+    {{else}}
+     <li>
+       {{#q-hoverable
+          tagName="a"
+          class=item.cssClass
+          action=item.action
+          hoverOver="componentMouseEnter"
+          hoverOff="componentMouseLeave"}}
+          <i class="q-icon"></i>{{item.label}}
+        {{/q-hoverable}}
+      </li>
+    {{/if}}
+
+  {{/each}}
+{{/q-dropdown}}

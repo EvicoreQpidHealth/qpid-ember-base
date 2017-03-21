@@ -1,0 +1,77 @@
+$large-height: 2rem;
+
+.progress.larger {
+  height: $large-height;
+
+  p {
+    line-height: $large-height;
+  }
+}
+.progress {
+  margin-top: 0.625rem;
+  margin-bottom: 0.3125rem;
+  padding: 0;
+  position: relative;
+  background-color: #e6e6e6;
+  border: none;
+
+  .overflow-wrap {
+    overflow: hidden;
+    height: inherit;
+    position: relative;
+    border-radius: 999px;
+  }
+  .percent {
+     z-index: 1;
+   }
+  .meter {
+    position: relative;
+    overflow:hidden;
+    background-color: $progress-meter-color;
+    min-width: 0;
+    position: absolute;
+    transition-timing-function: ease-in-out;
+    -webkit-transition: width 1s; /* Safari */
+    transition: width 1s;
+  }
+  .meter.completed {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: $progress-meter-success-color;
+  }
+  .meter.completed.round {
+    border-radius: 999px;
+  }
+  .goal {
+    width: 2px;
+    top: -0.2em;
+    padding: 1.2em 0;
+    height: inherit;
+    position: absolute;
+    display: block;
+    background-color: $progress-meter-success-color;
+  }
+  p {
+    color: white;
+    position:absolute;
+    white-space: nowrap;
+    text-align: right;
+    margin: 0 4px 0 -4px;
+    width: 100%;
+    display:block;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+  }
+  .skipped {
+    background-color: #cacaca;
+  }
+  .goalNum {
+    width: auto;
+    text-align: left;
+    margin: 0;
+    transform: translate(-115%, 0);
+  }
+  .all, .goalNum  {
+    color: #a5a5a5;
+    text-shadow: initial;
+  }
+}

@@ -1,0 +1,67 @@
+
+/*******************************************************************************
+ ** Tabs
+ ******************************************************************************/
+$inactive-tab-color: #888;
+
+.tabs {
+  /*border-bottom:1px solid #ddd;*/
+  position: relative;
+}
+
+.tabs > dd.tab-title {
+  display: inline-block;
+  float: none;
+}
+
+.tabs dd > a,.tabs .tab-title > a {
+  background-color:transparent;
+  color: $inactive-tab-color;
+  padding:0.8rem 2rem;
+  outline: 0;
+  text-decoration: none;
+}
+
+.tabs dd > a.active, .tabs .tab-title > a.active,
+.tabs dd > a.active:hover, .tabs .tab-title > a.active:hover, {
+  color: $jet;
+  font-weight: bold;
+}
+
+
+
+.tabs dd, .tabs .tab-title {
+  float: none;
+  display: inline-block;
+}
+
+.tabs dd > a:hover,.tabs .tab-title > a:hover {
+  background-color:transparent;
+  color:$primary-color;
+}
+
+.tabs dd.active a,.tabs .tab-title.active a {
+  background-color:transparent;
+  color: $jet;
+  outline:0
+}
+
+.tab-follow {
+  list-style:none;
+  position:absolute;
+  left:0;
+  width:7rem;
+  padding:0 2.5rem;
+  border-bottom:2px solid $primary-color;
+  z-index:10;
+}
+
+.tab-wrap > div {
+  margin-bottom: 2px; // create space for underline/tab-follow
+
+  .fa-times-circle {
+    padding: 0.4rem;
+    color: $inactive-tab-color;
+    cursor: pointer;
+  }
+}

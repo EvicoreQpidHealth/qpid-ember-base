@@ -1,0 +1,10 @@
+<span data-tooltip aria-haspopup='true' class='has-tip' title={{tooltipText}}>
+  {{#if hasBlock}}
+    {{yield}}
+  {{else}}
+    <span class='selected-highlight'>
+      {{infoText}} {{fa-icon icon='question-circle'}}
+    </span>
+  {{/if}}
+</span>
+

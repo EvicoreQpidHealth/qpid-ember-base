@@ -1,0 +1,15 @@
+{{#if arrow}}
+  {{#q-dropdown
+    btnText=currentLayout
+    arrow=arrow
+    btnClass=btnClass
+    btnTextClasses=btnTextClasses }}
+    {{#each layouts as |layout|}}
+      <li>
+        <a {{action 'switchLayout' layout}}>{{layout.name}}</a>
+      </li>
+    {{/each}}
+  {{/q-dropdown}}
+{{else}}
+  <h1 class="title truncate">{{defaultText}}</h1>
+{{/if}}

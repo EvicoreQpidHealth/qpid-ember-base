@@ -1,0 +1,39 @@
+
+input.error {
+  color: #222;
+  background: #fcb6b6;
+}
+
+input.narrow, input.inline.narrow {
+  width: 3.5rem;
+}
+
+input.normal, input.inline.normal {
+  width: 7rem;
+}
+
+input.wide, input.inline.wide {
+  width: 10rem;
+}
+
+input.wider, input.inline.wider {
+  width: 15rem;
+}
+
+input[type="file"], input[type="checkbox"], input[type="radio"], select {
+  margin: 0;
+}
+
+input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], input[type="color"], textarea, select {
+  margin: 0;
+  border-radius: 0.2rem;
+}
+
+.date-picker input {
+  @extend input[type="text"];
+}
+
+input.inline {
+  display: inline-block;
+  width: auto;
+}

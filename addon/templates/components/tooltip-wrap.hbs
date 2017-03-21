@@ -1,0 +1,14 @@
+<div class="tooltip-trigger"
+  data-dropdown={{tooltipId}}
+  data-options="align:top;"
+  aria-controls="dropdown"
+  aria-expanded="false">
+  {{yield hoverArea}}
+</div>
+<div id={{tooltipId}}
+  class="tooltip f-dropdown content {{styleClass}}"
+  data-dropdown-content
+  aria-hidden="false"
+  tabindex="-1" >
+  {{yield tooltipArea}}
+</div>

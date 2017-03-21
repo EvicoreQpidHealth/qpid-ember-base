@@ -1,0 +1,69 @@
+.sup-btn {
+  display: inline-block;
+  text-align: left;
+  line-height: 1.2rem;
+  letter-spacing: .1rem;
+  color: $jet;
+
+  &[disabled], &[disabled]:hover {
+    color: #888;
+    cursor: default;
+  }
+
+  &:not([disabled]):hover {
+    color: $primary-color;
+  }
+
+  span {
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+
+  sup {
+    display: block;
+    color: #888;
+    font-size: .7rem;
+  }
+}
+
+.dd-button {
+  .dropdown-arrow {
+    color: inherit;
+    font-size: 1.4rem;
+    vertical-align: middle;
+    top: -1px;
+    position: relative;
+  }
+}
+
+.no-pip.f-dropdown:after,
+.no-pip.f-dropdown:before {
+  display: none;
+}
+
+.select-style {
+  display: block;
+  position: relative;
+  background-color: $select-bg-color;
+  padding: 0.5rem;
+  color: $input-font-color;
+  font-size: $input-font-size;
+  border: 1px solid $input-border-color;
+  border-radius: $input-border-radius;
+  text-transform: initial;
+  font-weight: bold;
+  letter-spacing: .1rem;
+
+  &:hover {
+    background-color: $select-hover-bg-color;
+    color: $input-font-color;
+  }
+
+  .fa-angle-down {
+    color: $input-font-color;
+    position: absolute;
+    right: 6px;
+    top: 23%;
+    font-size: 15px;
+  }
+}

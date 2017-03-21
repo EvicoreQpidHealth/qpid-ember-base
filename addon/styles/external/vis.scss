@@ -1,0 +1,67 @@
+.timeline-title {
+  cursor:pointer;
+  z-index: 0;
+}
+
+.timeline-title:hover {
+  z-index: 1;
+  background-color: #007dd7;
+  padding: 3px;
+  border-radius: 2px;
+  color: white;
+}
+
+.timeline-details {
+  opacity:0;
+  transition: 0.4s all;
+  max-width: 0;
+  position:absolute;
+  overflow:hidden;
+  background-color: azure;
+  border-radius: 2px;
+  border: 1px solid #eee;
+  white-space: pre;
+  padding: 3px;
+  margin: 3px;
+  bottom:0;
+  color: black;
+}
+
+.timeline-title:hover .timeline-details {
+  opacity:1;
+  max-width: 1000px;
+  z-index: 1;
+}
+
+.vis-time-axis .vis-text {
+  color: #999 !important;
+  font-size: .7em !important;
+}
+
+.vis-timeline {
+  border: none !important;
+}
+
+.vis-item.vis-dot {
+  border-width: 7px;
+  border-radius: 7px;
+  cursor: pointer;
+  padding: 0;
+  top: -14px !important;
+}
+
+.vis-item.vis-dot:hover {
+  border-color: goldenrod;
+  transition: 0.2s;
+}
+
+.vis-item.vis-point.vis-selected {
+  background-color: transparent;
+}
+
+.vis-item.vis-dot.vis-selected {
+}
+
+.vis-item-content {
+  display: none;
+}

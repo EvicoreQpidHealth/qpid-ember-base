@@ -1,0 +1,59 @@
+@mixin placeholder($color) {
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+
+  &:-moz-placeholder { /* Firefox 18- */
+    color: $color;
+  }
+
+  &::-moz-placeholder {  /* Firefox 19+ */
+    color: $color;
+  }
+
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+}
+
+// applies themes to the parent selector, allowing theme-get for lookup
+// of theme specific variables. Supplying a specific theme, only applies the
+// provided styles to that specific theme
+@mixin themify($specific-theme: null) {
+  @each $theme-name, $theme in $themes {
+    @if ($specific-theme == null or $theme-name == $specific-theme) {
+      $current-theme: $theme !global;
+      @if $theme-name == 'default' {
+        @content;
+      } @else {
+        .theme-#{$theme-name} & {
+          @content;
+        }
+        &.theme-#{$theme-name} {
+          @content;
+        }
+      }
+    }
+  }
+}
+
+// this function takes all the themes in the theme map and merges them with
+// the map from theme-overrides
+@function override-themes($theme-overrides) {
+  $new-themes: ();
+  @each $theme-name, $theme in $themes {
+    @if map-has-key($theme-overrides, $theme-name) {
+      $merged-theme: map-merge(map-get($themes, $theme-name), map-get($theme-overrides, $theme-name));
+      $new-themes: map-merge($new-themes, ($theme-name: $merged-theme ));
+    }
+  }
+  @return $new-themes;
+}
+
+@function theme-get($key, $theme: $current-theme) {
+  $ret: map-get($theme, $key);
+  @if not $ret {
+    @error 'Your theme doesn\'t have a value for `#{$key}`.';
+  }
+  @return $ret;
+}

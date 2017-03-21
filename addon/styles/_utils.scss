@@ -1,0 +1,164 @@
+.inherit-width {
+  width: inherit;
+}
+
+.inline-link {
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.block-link {
+  display: block;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.vertical-overflow {
+  overflow-y: auto;
+}
+
+.no-border {
+  border: none;
+  box-shadow: none;
+}
+
+input.no-border {
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+
+.full-width {
+  width:100%;
+  max-width:100%;
+  position: relative;
+}
+
+.full-height {
+  height: 100%;
+  max-height: 100%;
+}
+
+.full-height-minus-2-top-bars {
+  height:calc(100% - 38px);
+}
+
+.half-width {
+  width: 49%;
+  max-width: 49%;
+  position: relative;
+}
+
+.tiny-padding {
+  padding: 0 0.25rem;
+}
+
+.small-padding {
+  padding: 0 1rem;
+}
+
+.all-padding {
+  padding: 1rem;
+}
+
+.all-small-padding {
+  padding: 0.5rem;
+}
+
+.medium-padding {
+  padding: 2rem
+}
+
+.small-margin {
+  margin:0 1rem
+}
+
+.clear {
+  clear: both;
+}
+
+.has-tip {
+    color: inherit;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+
+.padding-right {
+  padding-right: 1rem;
+}
+
+.no-margin {
+  margin-bottom: 0.25rem;
+}
+
+.card.no-margin {
+  margin: 0;
+}
+
+.margin-small {}
+
+.margin-medium {
+  margin: 1.5rem;
+}
+
+.margin-large {}
+
+.margin-bottom-medium {
+  margin-bottom: 1.5rem;
+}
+
+.break-words {
+  white-space: normal;
+}
+
+.preserve-whitespace {
+  white-space: pre-wrap;;
+  word-break: break-word;
+}
+
+.nonrelative {
+  position: inherit;
+}
+
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
+
+.right-align {
+  text-align: right;
+}
+
+.center-align {
+  text-align: center;
+}
+
+.left-align {
+  text-align: left;
+}
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.push-down {
+  padding-bottom: 0.75rem;
+}
+
+.margin-bottom-force-10 {
+  margin-bottom: 10px !important;
+}
+
+.opacity-80 {
+  opacity: 0.8;
+}
