@@ -13,7 +13,6 @@
   },
   "repository": "",
   "scripts": {
-    "yarn": "yarn",
     "build": "node_modules/ember-cli/bin/ember build",
     "start": "node_modules/ember-cli/bin/ember server",
     "test": "node_modules/ember-cli/bin/ember test --test-port=0",
