@@ -36,8 +36,9 @@
     width: 60%;
 
     button {
-      margin: 10px 10px 0px 10px;
+      margin: 10px 10px 10px 10px;
       width: 80%;
+      white-space: nowrap;
     }
 
     input, textarea {
@@ -48,6 +49,22 @@
     .modal-image {
       height: 100px;
       width: 100px;
+    }
+
+    .modal-highlight {
+      background-color: #eee;
+      border-radius: 5px;
+      padding: 1rem;
+
+      p {
+        font-size: 0.75rem;
+        margin: 0;
+      }
+
+      p + p {
+        display: block;
+        margin-top: 0.5rem;
+      }
     }
 
     .modal-title {
