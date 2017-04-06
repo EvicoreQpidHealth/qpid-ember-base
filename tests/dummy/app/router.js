@@ -7,14 +7,6 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('summary-results');
-  this.route('fancy-search');
-  this.route('tabs', function() {
-    this.route('one');
-    this.route('two');
-  });
-  this.route('accordion');
-  this.route('autocomplete');
 });
 
 export default Router;

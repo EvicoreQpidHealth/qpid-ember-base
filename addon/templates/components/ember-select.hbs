@@ -1,7 +1,0 @@
-<select {{action 'change' on='change'}}>
-    {{#each content key="@index" as |item|}}
-        <option value="{{item}}" selected={{if item.id (is-equal item.id selectedValue.id) (is-equal item selectedValue)}}>
-            {{yield item}}
-        </option>
-    {{/each}}
-</select>

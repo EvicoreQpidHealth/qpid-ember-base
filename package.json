@@ -1,6 +1,6 @@
 {
   "name": "qpid-shared-2",
-  "version": "5.0.0",
+  "version": "5.1.0",
   "description": "Shared QPID components, models, and resources",
   "keywords": [
     "ember-addon"
@@ -25,7 +25,6 @@
     "ember-cli-htmlbars": "^1.0.10",
     "ember-cli-sass": "6.0.0",
     "node-sass": "4.3.0",
-    "ember-cli-spinjs": "1.1.4",
     "ember-truth-helpers": "1.3.0",
     "git-repo-info": "git://github.com/cball/git-repo-info.git#add-date-to-repo-info",
     "shelljs": "^0.5.3"

@@ -1,6 +1,0 @@
-{{#each options as |option|}}
-  <label class='button radio-button {{if option.checked "active" "outline-only"}}' {{action 'selectRadio' option.value}}>
-    <input type='radio' name={{group}} value={{option.value}} checked={{option.checked}}>
-    {{option.label}}
-  </label>
-{{/each}}
