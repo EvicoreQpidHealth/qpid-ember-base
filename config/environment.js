@@ -1,4 +1,4 @@
-/*jshint node:true*/
+/* eslint-env node */
 'use strict';
 
 var gitRepoInfo = require('git-repo-info');
@@ -8,7 +8,7 @@ var dateFromGit = function() {
   return exec('git log -1 --format="%ad" HEAD', { silent: true }).output.trim();
 };
 
-module.exports = function() {
+module.exports = function(/* environment, appConfig */) {
   var info = gitRepoInfo();
 
   // if we weren't able to parse a date from the commit, ask git
