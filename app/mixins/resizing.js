@@ -1,1 +1,1 @@
-export { default } from 'qpid-shared-2/mixins/resizing'
+export { default } from 'qpid-ember-base/mixins/resizing'

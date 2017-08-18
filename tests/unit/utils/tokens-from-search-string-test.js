@@ -1,4 +1,4 @@
-import tokensFromSearchString from 'qpid-shared-2/utils/tokens-from-search-string';
+import tokensFromSearchString from 'qpid-ember-base/utils/tokens-from-search-string';
 import { module, test } from 'qunit';
 
 module('Unit | Utility | tokens from search string');

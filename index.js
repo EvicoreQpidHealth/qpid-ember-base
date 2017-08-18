@@ -2,7 +2,7 @@
 'use strict';
 
 module.exports = {
-  name: 'qpid-shared-2',
+  name: 'qpid-ember-base',
 
   included: function(app, parentAddon) {
     this._super.included.apply(this, arguments);

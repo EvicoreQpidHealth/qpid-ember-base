@@ -1,7 +1,7 @@
 {
-  "name": "qpid-shared-2",
+  "name": "qpid-ember-base",
   "version": "5.1.0",
-  "description": "Shared QPID components, models, and resources",
+  "description": "Base styling and layout for Qpid's Ember apps",
   "keywords": [
     "ember-addon"
   ],

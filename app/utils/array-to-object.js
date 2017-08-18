@@ -1,1 +1,1 @@
-export { default } from 'qpid-shared-2/utils/array-to-object'
+export { default } from 'qpid-ember-base/utils/array-to-object'

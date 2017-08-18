@@ -1,1 +1,1 @@
-export { textToColor } from 'qpid-shared-2/utils/color-utils';
+export { textToColor } from 'qpid-ember-base/utils/color-utils';

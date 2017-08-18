@@ -1,1 +1,1 @@
-export { default } from 'qpid-shared-2/utils/tokens-from-search-string';
+export { default } from 'qpid-ember-base/utils/tokens-from-search-string';

@@ -1,1 +1,1 @@
-export { default } from 'qpid-shared-2/mixins/app-info';
+export { default } from 'qpid-ember-base/mixins/app-info';

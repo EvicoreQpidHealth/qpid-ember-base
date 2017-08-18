@@ -1,5 +1,5 @@
 {
-  "name": "qpid-shared-2",
+  "name": "qpid-ember-base",
   "dependencies": {
     "foundation": "^5.5.3",
     "font-awesome": "~4.5.0",

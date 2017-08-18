@@ -1,1 +1,1 @@
-export { default } from 'qpid-shared-2/utils/copy-util';
+export { default } from 'qpid-ember-base/utils/copy-util';

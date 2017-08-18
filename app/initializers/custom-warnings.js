@@ -1,1 +1,1 @@
-export { default, initialize } from 'qpid-shared-2/initializers/custom-warnings';
+export { default, initialize } from 'qpid-ember-base/initializers/custom-warnings';

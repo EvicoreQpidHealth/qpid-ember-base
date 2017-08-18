@@ -1,1 +1,1 @@
-export { default } from 'qpid-shared-2/utils/save-scroll-between-transitions'
+export { default } from 'qpid-ember-base/utils/save-scroll-between-transitions'
