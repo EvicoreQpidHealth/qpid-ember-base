@@ -1,6 +1,6 @@
 {
   "name": "qpid-ember-base",
-  "version": "5.1.0",
+  "version": "1.0.0",
   "description": "Base styling and layout for Qpid's Ember apps",
   "keywords": [
     "ember-addon"
@@ -10,7 +10,11 @@
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EvicoreQpidHealth/qpid-ember-base"
+  },
+  "license": "MIT",
   "scripts": {
     "build": "node_modules/ember-cli/bin/ember build",
     "start": "node_modules/ember-cli/bin/ember server",
