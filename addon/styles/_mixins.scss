@@ -37,6 +37,34 @@
   }
 }
 
+/**
+  * Applies content to multiple themes.
+  *
+  * h3 {
+  *   @include multi-themify('theme-a', 'theme-b') {
+  *     font-family: 'Papyrus';
+  *   }
+  * }
+  *
+  * Will generate:
+  *
+  * h3 .theme-theme-a {
+  *   font-family: 'Papyrus';
+  * }
+  *
+  * h3 .theme-theme-b {
+  *   font-family: 'Papyrus';
+  * }
+  */
+@mixin multi-themify($themes...) {
+  @each $theme in $themes {
+    @include themify($theme) {
+      @content;
+    }
+  }
+}
+
+
 // this function takes all the themes in the theme map and merges them with
 // the map from theme-overrides
 @function override-themes($theme-overrides) {
