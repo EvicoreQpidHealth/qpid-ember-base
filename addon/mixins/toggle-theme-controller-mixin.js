@@ -1,12 +1,17 @@
-import Ember from 'ember';
+import Mixin from 'ember-metal/mixin';
+import service from 'ember-service/inject';
+import observer from 'ember-metal/observer';
 
-export default Ember.Mixin.create({
+export default Mixin.create({
   queryParams: ['theme'],
   theme: 'carriersweb',
 
-  themingService: Ember.inject.service('theming'),
+  themingService: service('theming'),
 
-  themeUpdate: Ember.observer('theme', function() {
-    this.get('themingService').setTheme(this.get('theme'));
+  themeUpdate: observer('theme', function() {
+    let themingService = this.get('themingService');
+    let theme = this.get('theme');
+
+    themingService.setTheme(theme);
   })
 });

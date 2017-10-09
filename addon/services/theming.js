@@ -1,22 +1,22 @@
-import Ember from 'ember';
+import Service from 'ember-service';
+import jquery from 'jquery';
 
-export default Ember.Service.extend({
-  // enabled themes
-  _themes: {
-    'evicore': true,
-    'carriersweb': true,
-    'qpid': true
-  },
+export default Service.extend({
+  base: 'theme-',
+  theme: 'carriersweb',
 
   setTheme(theme) {
-    let themes = this.get('_themes');
-    if (theme && themes[theme]) {
-      for (let availableTheme in themes) {
-        if (Ember.$('body').hasClass(`theme-${availableTheme}`)) {
-          Ember.$('body').removeClass(`theme-${availableTheme}`);
-        }
-      }
-      Ember.$('body').addClass(`theme-${theme}`);
-    }
+    let currentTheme = this.get('theme');
+    let newTheme = this.set('theme', theme);
+    let body = this._getBody();
+    let base = this.get('base');
+
+    body
+      .removeClass(`${base}${currentTheme}`)
+      .addClass(`${base}${newTheme}`);
+  },
+
+  _getBody() {
+    return jquery('body');
   }
 });
