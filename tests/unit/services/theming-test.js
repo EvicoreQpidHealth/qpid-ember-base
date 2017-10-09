@@ -13,12 +13,12 @@ test('base is set correctly', function(assert) {
   assert.equal(service.get('base'), 'theme-');
 });
 
-test('theme is defaulted to carriersweb', function(assert) {
+test('theme is defaulted to qpid', function(assert) {
   assert.expect(1);
 
   let service = this.subject();
 
-  assert.equal(service.get('theme'), 'carriersweb');
+  assert.equal(service.get('theme'), 'qpid');
 });
 
 test('setTheme replaces the previous theme class with the new theme class',
@@ -30,7 +30,7 @@ test('setTheme replaces the previous theme class with the new theme class',
     service._getBody = function() {
       return {
         removeClass(cssClass) {
-          assert.equal(cssClass, 'theme-carriersweb');
+          assert.equal(cssClass, 'theme-qpid');
           return this;
         },
         addClass(cssClass) {

@@ -15,7 +15,7 @@ test('theme is the only query param added', function(assert) {
   assert.deepEqual(subject.get('queryParams'), ['theme']);
 });
 
-test('theme query param defaults to carriersweb', function(assert) {
+test('theme query param defaults to qpid', function(assert) {
   assert.expect(1);
 
   let ToggleThemeControllerObject =
@@ -23,7 +23,7 @@ test('theme query param defaults to carriersweb', function(assert) {
 
   let subject = ToggleThemeControllerObject.create();
 
-  assert.deepEqual(subject.get('theme'), 'carriersweb');
+  assert.deepEqual(subject.get('theme'), 'qpid');
 });
 
 test('when the theme is updated, the theming service gets called with the updated theme',

@@ -3,7 +3,7 @@ import Ember from 'ember';
 const { getWithDefault, typeOf } = Ember;
 
 const DEFAULTS = {
-  theme: 'carriersweb'
+  theme: 'qpid'
 };
 
 export default {
