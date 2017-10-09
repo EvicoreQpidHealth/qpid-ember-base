@@ -1,10 +1,11 @@
 import Mixin from 'ember-metal/mixin';
 import service from 'ember-service/inject';
 import observer from 'ember-metal/observer';
+import Configuration from '../configuration';
 
 export default Mixin.create({
   queryParams: ['theme'],
-  theme: 'carriersweb',
+  theme: Configuration.theme,
 
   themingService: service('theming'),
 
