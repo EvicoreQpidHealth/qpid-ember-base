@@ -43,18 +43,11 @@
   width: 100%;
 }
 
-.card-column .header, .card-column .sub-header, .card-column .footer {
-  @include themify {
-    color: theme-get(header-color);
-  }
-}
-
 .card-column .header, .card-column .sub-header {
   border-bottom: 0.1rem solid #ddd;
   padding: 0.75rem 1rem;
   position: relative;
 }
-
 
 /* Brian's Version */
 .card-column .header, .card-column .sub-header {
@@ -65,27 +58,6 @@
   // font-style: italic;
   letter-spacing: 1px;
   font-weight: normal;
-}
-
-.card-column .header,
-.card-column .sub-header {
-  @include themify {
-    font-style: initial;
-    font-size: theme-get(header-font-size);
-    letter-spacing: .12rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-
-    @if (theme-get('name') == 'carriersweb') {
-      border-bottom: none;
-      font-weight: bolder;
-      text-align: left;
-      text-transform: none;
-    } @else {
-      text-transform: uppercase;
-    }
-  }
 }
 
 .card-column .allow-overflow,
@@ -159,12 +131,6 @@
 .card-column .footer {
   border-top: 1px solid #ddd;
   padding: 0.75rem 1rem;
-
-  button, .button {
-    @include themify {
-      margin: 0;
-    }
-  }
 }
 
 .card-column .footer.white-background {

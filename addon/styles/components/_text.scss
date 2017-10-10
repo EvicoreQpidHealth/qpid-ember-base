@@ -22,12 +22,6 @@ h6 {
   margin-bottom: 0.2rem;
 }
 
-a {
-  @include themify {
-    color: theme-get(primary-color);
-  }
-}
-
 a, p, label, button, .button {
   letter-spacing: .2rem;
 }
