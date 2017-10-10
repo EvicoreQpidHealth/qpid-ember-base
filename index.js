@@ -13,7 +13,6 @@ module.exports = {
     });
 
     target.import(app.bowerDirectory + '/foundation/js/vendor/modernizr.js');
-
     target.import(app.bowerDirectory + '/foundation/js/foundation.min.js');
     target.import(app.bowerDirectory + '/foundation/js/foundation/foundation.tooltip.js');
   },
