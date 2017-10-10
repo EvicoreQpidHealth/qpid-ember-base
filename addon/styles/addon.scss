@@ -1,7 +1,6 @@
 @import "settings";
 @import "bower_components/foundation/scss/foundation";
 @import "mixins";
-@import "themes";
 @import "utils";
 
 @import "components/actionable-textarea";
@@ -9,7 +8,6 @@
 @import "components/card";
 @import "components/checkbox-group";
 @import "components/collapse-group";
-@import "components/colors";
 @import "components/columns";
 @import "components/edit-mode";
 @import "components/evidence-group";
@@ -21,7 +19,6 @@
 @import "components/q-dropdown";
 @import "components/q-progress-bar";
 @import "components/radio-button-list";
-@import 'components/simple-search-bar';
 @import "components/f-dropdown";
 @import "components/grid-dropdown";
 @import "components/tab-bar";
@@ -59,14 +56,6 @@
 
 html {
   font-size: $base-font-size;
-}
-
-body {
-  @include themify {
-    background-color: theme-get('background-color');
-    font-family: theme-get('font-family');
-    line-height: theme-get('line-height');
-  }
 }
 
 body > .ember-view {

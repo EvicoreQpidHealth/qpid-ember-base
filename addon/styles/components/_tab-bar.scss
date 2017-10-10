@@ -3,13 +3,6 @@
  ** Tab Bar and Sub Tab Bar
  ******************************************************************************/
 
-.tab-bar {
-  @include themify {
-    background: theme-get(secondary-color);
-    padding: 0 1rem;
-  }
-}
-
 .tab-bar.editing {
   background: #CE5161;
 }
