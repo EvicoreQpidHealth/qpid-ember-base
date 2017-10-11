@@ -1,8 +1,12 @@
 
 .primary-color {
-  color: #009BF7
+  @include themify {
+    color: theme-get(primary-color)
+  }
 }
 
 .secondary-color {
-  color: #3A46A3
+  @include themify {
+    color: theme-get(secondary-color)
+  }
 }

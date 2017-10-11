@@ -23,7 +23,9 @@ h6 {
 }
 
 a {
-  color: #009BF7;
+  @include themify {
+    color: theme-get(primary-color);
+  }
 }
 
 a, p, label, button, .button {

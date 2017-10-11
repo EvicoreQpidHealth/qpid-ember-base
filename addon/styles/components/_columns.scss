@@ -44,7 +44,9 @@
 }
 
 .card-column .header, .card-column .sub-header, .card-column .footer {
-  color: #888;
+  @include themify {
+    color: theme-get(header-color);
+  }
 }
 
 .card-column .header, .card-column .sub-header {
@@ -67,13 +69,23 @@
 
 .card-column .header,
 .card-column .sub-header {
+  @include themify {
     font-style: initial;
-    font-size: 0.9rem;
+    font-size: theme-get(header-font-size);
     letter-spacing: .12rem;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    text-transform: uppercase;
+
+    @if (theme-get('name') == 'carriersweb') {
+      border-bottom: none;
+      font-weight: bolder;
+      text-align: left;
+      text-transform: none;
+    } @else {
+      text-transform: uppercase;
+    }
+  }
 }
 
 .card-column .allow-overflow,
@@ -149,7 +161,9 @@
   padding: 0.75rem 1rem;
 
   button, .button {
-    margin: 0;
+    @include themify {
+      margin: 0;
+    }
   }
 }
 

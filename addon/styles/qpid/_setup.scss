@@ -61,9 +61,11 @@ html {
 }
 
 body {
-  background-color: #F5F6FA;
-  font-family: 'Lato, sans-serif';
-  line-height: 1.5;
+  @include themify {
+    background-color: theme-get('background-color');
+    font-family: theme-get('font-family');
+    line-height: theme-get('line-height');
+  }
 }
 
 body > .ember-view {

@@ -56,51 +56,49 @@
 
 
 table {
-  input[type=checkbox] {
-    margin:.25rem
-  }
-
-  thead {
-    background-color: #009BF7;
-    th {
-      color: white;
-      border: 1px solid white;
+  @include themify {
+    input[type=checkbox] {
+      margin:.25rem
     }
-  }
-
-  tbody tr td, tr td {
-    font-size: 1rem;
-    line-height:2.5rem
-  }
-
-  td {
-    overflow:hidden;
-    text-overflow:ellipsis;
-    white-space:nowrap;
-    min-width:5rem;
-    &.small {
-      max-width:1rem;
+    thead {
+      background-color: theme-get(primary-color);
+      th {
+        color: white;
+        border: 1px solid white;
+      }
     }
-    &.medium {
-      max-width:15rem
+    tbody tr td, tr td {
+      font-size: 1rem;
+      line-height:2.5rem
     }
-    &.delete-button {
-      padding: 0.2rem 0.5rem 0.2rem 0.7rem;
+    td {
+      overflow:hidden;
+      text-overflow:ellipsis;
+      white-space:nowrap;
+      min-width:5rem;
+      &.small {
+        max-width:1rem;
+      }
+      &.medium {
+        max-width:15rem
+      }
+      &.delete-button {
+        padding: 0.2rem 0.5rem 0.2rem 0.7rem;
+      }
     }
-  }
-
-  tr {
-    cursor: pointer;
-    transition: .2s background;
-    &.selected,&.even.selected,&.alt.selected,&:nth-of-type(even).selected {
-      background-color:#DAEDFB;
-    }
-    &:hover {
-      background: rgba($primary-color, 0.1) !important;
-      transition: 0.2s;
-    }
-    &.even, &.alt, &:nth-of-type(even) {
-      background: rgba($body-bg, 0.5);
+    tr {
+      cursor: pointer;
+      transition: .2s background;
+      &.selected,&.even.selected,&.alt.selected,&:nth-of-type(even).selected {
+        background-color:#DAEDFB;
+      }
+      &:hover {
+        background: rgba($primary-color, 0.1) !important;
+        transition: 0.2s;
+      }
+      &.even, &.alt, &:nth-of-type(even) {
+        background: rgba($body-bg, 0.5);
+      }
     }
   }
 }

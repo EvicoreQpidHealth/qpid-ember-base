@@ -1,27 +1,29 @@
 .reveal-modal {
-  visibility: visible;
-  display: block;
-  top: 10% !important;
+  @include themify {
+    visibility: visible;
+    display: block;
+    top: 10% !important;
 
-  &.centered {
-    text-align: center;
-  }
-  &.small-width {
-    width: 374px;
-  }
-  p {
-    text-transform: none;
-    letter-spacing: normal;
-    font-size: 1.15rem;
-    margin-bottom: 1.5rem;
-  }
-  .close-reveal-modal {
-    right: .4rem;
-    font-weight: 400;
-    line-height: 1.2rem;
-  }
-  .close-reveal-modal:hover {
-    color: #009BF7;
+    &.centered {
+      text-align: center;
+    }
+    &.small-width {
+      width: 374px;
+    }
+    p {
+      text-transform: none;
+      letter-spacing: normal;
+      font-size: 1.15rem;
+      margin-bottom: 1.5rem;
+    }
+    .close-reveal-modal {
+      right: .4rem;
+      font-weight: 400;
+      line-height: 1.2rem;
+    }
+    .close-reveal-modal:hover {
+      color: theme-get(primary-color);
+    }
   }
 }
 
