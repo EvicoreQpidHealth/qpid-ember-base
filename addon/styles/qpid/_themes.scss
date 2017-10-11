@@ -1,0 +1,36 @@
+$themes: (
+  'qpid': (
+    'name': 'qpid',
+
+    // main theming settings
+    'font-family': 'Lato, sans-serif',
+    'border-radius': 0.25rem,
+    'header-font-size': 0.9rem,
+    'button-font-size': 0.8rem,
+    'line-height': 1.5,
+
+    // main theming flags (1 = true, 0 = false)
+    'has-shadow': 1,
+
+    // main theming colors
+    'background-color': #F5F6FA,
+    'border-color': #DDD,
+    'primary-color': #009BF7,
+    'secondary-color': #3A46A3,
+    'disabled-color': #BBB,
+    'header-color': #888,
+
+    // component specific variables
+    'search-background-color': #DDD,
+    'search-color': #999,
+
+    'button-bg-outline-only': #009BF7,
+    'button-bg-outline-only--hover': #009BF7,
+
+    'success-color': green,
+    'date-button-color': #888,
+    'indication-status-color': white,
+    'attestation-message-color': black,
+    'attestation-message-background-color': #FFFFCC
+  )
+);
