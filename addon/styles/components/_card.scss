@@ -1,351 +1,341 @@
 
 .card {
-  @include themify {
-    width: auto;
+  width: auto;
+  background: #fff;
+  padding: 0.75rem 1rem 0.75rem 1rem;
+  border-bottom: 0.1rem solid #ddd;
+  cursor: pointer;
+  color: #222;
+  transition: .2s all;
+  text-transform: none;
+  letter-spacing: 1px;
+  cursor: pointer;
+
+  &:hover {
+    background: #F5FBFF;
+  }
+
+  &.no-hover {
+    cursor: default;
     background: #fff;
-    padding: 0.75rem 1rem 0.75rem 1rem;
-    border-bottom: 0.1rem solid #ddd;
-    cursor: pointer;
-    color: #222;
-    transition: .2s all;
-    text-transform: none;
-    letter-spacing: 1px;
-    cursor: pointer;
+  }
 
-    &:hover {
-      background: #F5FBFF;
+  &.selected, .active > & {
+    background: #009BF7;
+    color: #fff;
+  }
+
+  &.full-height {
+    min-height: 100%;
+  }
+
+  &.square {
+    width: 15rem;
+    height: 15rem;
+    display: inline-block;
+    text-align: center;
+    &.super-small {
+      width: 8rem;
+      height: 8rem;
     }
+    &.line-item {
+      width: 12rem;
+      height: 3rem;
+    }
+    .icon {
+      margin: 1rem;
+      color: black;
+    }
+    .fa {
+      color: #555;
+    }
+  }
 
-    &.no-hover {
-      cursor: default;
+  &.alert {
+    width: 30rem;
+    height: 12rem;
+    display: inline-block;
+    text-align: left;
+  }
+
+  &.transparent, &.force-large.transparent, &.force-small.transparent {
+    background: transparent;
+  }
+
+  &.faded {
+    opacity: 0.6;
+  }
+
+  &.raised {
+    box-shadow: 0.1rem 0.1rem 0.2rem 0.1rem rgba(0, 0, 0, 0.10);
+    border-radius: 0.2rem;
+    border: 0.1rem solid #ccc;
+  }
+
+  &.small, &.force-small, &.super-small, &.line-item {
+    margin: 0.5rem 0.75rem;
+    padding: 0.6rem 1rem 0.6rem 1rem;
+    border-radius: 0.25rem;
+    border-bottom: 0;
+
+    &.selected {
       background: #fff;
+      color: #222;
+      box-shadow: inset 0 0 0 0.2rem #DDD;
     }
 
-    &.selected, .active > & {
-      background: theme-get(primary-color);
-      color: #fff;
+    .card > & {
+      margin: 0.75rem 0;
     }
 
-    &.full-height {
-      min-height: 100%;
+    & > .main-table {
+      margin: -0.75rem;
     }
 
-    &.square {
-      width: 15rem;
-      height: 15rem;
-      display: inline-block;
-      text-align: center;
-      &.super-small {
-        width: 8rem;
-        height: 8rem;
-      }
-      &.line-item {
-        width: 12rem;
-        height: 3rem;
-      }
-      .icon {
-        margin: 1rem;
-        color: black;
-      }
-      .fa {
-        color: #555;
-      }
-    }
-
-    &.alert {
-      width: 30rem;
-      height: 12rem;
-      display: inline-block;
-      text-align: left;
-    }
-
-    &.transparent, &.force-large.transparent, &.force-small.transparent {
+    &.empty-card {
       background: transparent;
-    }
-
-    &.faded {
-      opacity: 0.6;
-    }
-
-    &.raised {
-      box-shadow: 0.1rem 0.1rem 0.2rem 0.1rem rgba(0, 0, 0, 0.10);
-      border-radius: 0.2rem;
-      border: 0.1rem solid #ccc;
-    }
-
-    &.small, &.force-small, &.super-small, &.line-item {
-      margin: 0.5rem 0.75rem;
-      padding: 0.6rem 1rem 0.6rem 1rem;
-
-      @if theme-get(has-shadow) == 1 {
-        box-shadow: 0 0.05em 0.15em rgba(0, 0, 0, 0.25);
-      }
-      border-radius: theme-get(border-radius);
-      border-bottom: 0;
-
-      &.selected {
-        background: #fff;
-        color: #222;
-        @if theme-get(has-shadow) == 1 {
-          box-shadow: 0 0.05em 0.2em rgba(0, 0, 0, 0.25), inset 0 0 0 0.2rem theme-get(primary-color);
-        } @else {
-          box-shadow: inset 0 0 0 0.2rem theme-get(border-color);
-        }
-      }
-
-      .card > & {
-        margin: 0.75rem 0;
-      }
-
-      & > .main-table {
-        margin: -0.75rem;
-      }
-
-      &.empty-card {
-        background: transparent;
+      border: 0.25rem solid rgba(0, 0, 0, 0.2);
+      color: rgba(0, 0, 0, 0.2);
+      box-shadow: none;
+      cursor: default;
+      &:hover {
         border: 0.25rem solid rgba(0, 0, 0, 0.2);
         color: rgba(0, 0, 0, 0.2);
-        box-shadow: none;
-        cursor: default;
-        &:hover {
-          border: 0.25rem solid rgba(0, 0, 0, 0.2);
-          color: rgba(0, 0, 0, 0.2);
-        }
-        h5 {
-          padding: 6rem 2rem 0;
-        }
       }
-
-      &.none-card {
-        height: 8.75rem;
-        background: transparent;
-        border: 0.25rem solid rgba($alert-button-border-color, 0.4);
-        color: rgba($alert-button-border-color, 0.4);
-        box-shadow: none;
-        &:hover {
-          border-color: rgba($alert-button-border-color, 0.8);
-          color: rgba($alert-button-border-color, 0.8);
-        }
-        &.selected {
-          border: 0.25rem solid $alert-button-border-color;
-          color: $alert-button-border-color;
-          box-shadow: none;
-        }
-        p {
-          font-size: 1.4rem;
-          text-transform: none;
-        }
-      }
-
-      &.add-card {
-        height: 8.75rem;
-        background: transparent;
-        border: 0.25rem solid rgba($success-button-border-color, 0.75);
-        color: rgba($success-button-border-color, 0.75);
-        box-shadow: none;
-        &:hover {
-          border-color: rgba($success-button-border-color, 1);
-          color: rgba($success-button-border-color, 1);
-        }
-        p {
-          font-size: 1.4rem;
-          text-transform: none;
-        }
+      h5 {
+        padding: 6rem 2rem 0;
       }
     }
 
-    &.force-large {
-      box-shadow: none;
-      border-radius: 0;
-      width: auto;
-      background: #fff;
-      margin: 0;
-      padding: 0.75rem 1rem 0.75rem 1rem;
-      border-bottom: 0.1rem solid #ddd;
+    &.none-card {
+      height: 8.75rem;
       background: transparent;
-    }
-
-    &.fact-card {
-      height: 18rem;
-      margin: 0.5rem;
-      overflow: hidden;
-      a {
-        color: #ccc;
-      }
-      .scrollable {
-        overflow-y: auto;
-        position: relative;
-      }
-      .vertically-center {
-        padding: 2.1rem 0 0;
-      }
-      &:hover a, &.editing a {
-        color: $primary-color;
-      }
-      &.force-small {
-        width: calc(100% - 1rem);
-        &.selected {
-          box-shadow: 0 0.05em 0.2em rgba(0, 0, 0, 0.25), inset 0 0 0 0.333rem #009bf7;
-        }
-      }
-    }
-
-    &.error {
-      color: #de2d0f;
-      border-left: 0.2rem solid #de2d0f;
-
-      .active > & {
-        background: #de2d0f;
-      }
-
-      .active > &.small, .active > &.force-small {
-        color: #de2d0f;
-      }
-    }
-
-    &.info {
-      border-left: 0.4rem solid #009BF7;
-    }
-
-    &.card-button {
-      box-shadow: 0 0.05em 0.2em rgba(0, 0, 0, 0.25);
-    }
-
-    &:last-child {
-      border-bottom: none;
-    }
-
-    &:only-child {
-      border-bottom: 0.1rem solid #ddd;
-    }
-
-    &.small:only-child, &.force-small:only-child {
-      border-bottom: 0;
-    }
-
-    &.disabled {
-      color: #999;
-      cursor: default;
+      border: 0.25rem solid rgba($alert-button-border-color, 0.4);
+      color: rgba($alert-button-border-color, 0.4);
+      box-shadow: none;
       &:hover {
-        background: #fff;
+        border-color: rgba($alert-button-border-color, 0.8);
+        color: rgba($alert-button-border-color, 0.8);
       }
-    }
-
-    &.title {
-      font-weight: bold;
-      cursor: default;
-      &:hover {
-        background: #fff;
+      &.selected {
+        border: 0.25rem solid $alert-button-border-color;
+        color: $alert-button-border-color;
+        box-shadow: none;
       }
-    }
-
-    &.show-count .heading {
-      width: 81%;
-      display: inline-block;
-    }
-
-    button,.button {
-      margin-left: 0;
-    }
-
-    input {
-      margin-left: 0;
-    }
-
-    textarea {
-      margin-left: 0;
-    }
-
-    .light {
-      color: #999;
-    }
-
-    .heading {
-      color: #888;
-      font-style: initial;
-      font-size: theme-get(header-font-size);
-      text-transform: uppercase;
-      letter-spacing: .12rem;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-
-      .card-right {
-        font-size: 0.666em;
-      }
-
-      &.no-lower {
+      p {
+        font-size: 1.4rem;
         text-transform: none;
       }
     }
 
-    .subheading {
-      color: #43AC6A;
-      padding-bottom: 0.333rem;
-      letter-spacing: .1rem;
-      text-transform: none;
-    }
-
-    .card-footer {
-      text-align: center;
-      background-color:#f4f4f4;
-      border-top: 0.1rem solid #eee;
-      padding: 0.8rem 1rem 0.8rem 1rem;
-      margin-top: 0.5rem;
-    }
-
-    .aside {
-      float: left;
-      height: 100%;
-      padding-right: 1em;
-    }
-
-    .pipe {
-      border-left: 0.1rem solid #aaa;
-      height: 1em;
-      margin: 0 .5em;
-    }
-
-    .label {
-      margin-right: .35em;
-      letter-spacing: .15em;
-      &.secondary {
-        color: #999;
+    &.add-card {
+      height: 8.75rem;
+      background: transparent;
+      border: 0.25rem solid rgba($success-button-border-color, 0.75);
+      color: rgba($success-button-border-color, 0.75);
+      box-shadow: none;
+      &:hover {
+        border-color: rgba($success-button-border-color, 1);
+        color: rgba($success-button-border-color, 1);
+      }
+      p {
+        font-size: 1.4rem;
+        text-transform: none;
       }
     }
+  }
 
-    .confidence.high {
-      color: #3a945b;
+  &.force-large {
+    box-shadow: none;
+    border-radius: 0;
+    width: auto;
+    background: #fff;
+    margin: 0;
+    padding: 0.75rem 1rem 0.75rem 1rem;
+    border-bottom: 0.1rem solid #ddd;
+    background: transparent;
+  }
+
+  &.fact-card {
+    height: 18rem;
+    margin: 0.5rem;
+    overflow: hidden;
+    a {
+      color: #ccc;
+    }
+    .scrollable {
+      overflow-y: auto;
+      position: relative;
+    }
+    .vertically-center {
+      padding: 2.1rem 0 0;
+    }
+    &:hover a, &.editing a {
+      color: $primary-color;
+    }
+    &.force-small {
+      width: calc(100% - 1rem);
+      &.selected {
+        box-shadow: 0 0.05em 0.2em rgba(0, 0, 0, 0.25), inset 0 0 0 0.333rem #009bf7;
+      }
+    }
+  }
+
+  &.error {
+    color: #de2d0f;
+    border-left: 0.2rem solid #de2d0f;
+
+    .active > & {
+      background: #de2d0f;
     }
 
-    .attributes {
-      color: #3a945b;
-      font-size: .8em;
-      margin-right: .35em;
+    .active > &.small, .active > &.force-small {
+      color: #de2d0f;
+    }
+  }
+
+  &.info {
+    border-left: 0.4rem solid #009BF7;
+  }
+
+  &.card-button {
+    box-shadow: 0 0.05em 0.2em rgba(0, 0, 0, 0.25);
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &:only-child {
+    border-bottom: 0.1rem solid #ddd;
+  }
+
+  &.small:only-child, &.force-small:only-child {
+    border-bottom: 0;
+  }
+
+  &.disabled {
+    color: #999;
+    cursor: default;
+    &:hover {
+      background: #fff;
+    }
+  }
+
+  &.title {
+    font-weight: bold;
+    cursor: default;
+    &:hover {
+      background: #fff;
+    }
+  }
+
+  &.show-count .heading {
+    width: 81%;
+    display: inline-block;
+  }
+
+  button,.button {
+    margin-left: 0;
+  }
+
+  input {
+    margin-left: 0;
+  }
+
+  textarea {
+    margin-left: 0;
+  }
+
+  .light {
+    color: #999;
+  }
+
+  .heading {
+    color: #888;
+    font-style: initial;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: .12rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    .card-right {
+      font-size: 0.666em;
     }
 
-    .count {
-      opacity: .5;
+    &.no-lower {
+      text-transform: none;
     }
+  }
 
-    .description {
-      display: block;
-      opacity: .75;
-      margin-bottom: .5em;
-      line-height: 1.25em;
-    }
+  .subheading {
+    color: #43AC6A;
+    padding-bottom: 0.333rem;
+    letter-spacing: .1rem;
+    text-transform: none;
+  }
 
-    .inline-block {
-      display: inline-block;
-      height: 15rem;
-      overflow: auto;
-      min-width: 15rem;
-      word-wrap: break-word;
-    }
+  .card-footer {
+    text-align: center;
+    background-color:#f4f4f4;
+    border-top: 0.1rem solid #eee;
+    padding: 0.8rem 1rem 0.8rem 1rem;
+    margin-top: 0.5rem;
+  }
 
-    .c3 {
-      margin: 0 -0.5rem;
+  .aside {
+    float: left;
+    height: 100%;
+    padding-right: 1em;
+  }
+
+  .pipe {
+    border-left: 0.1rem solid #aaa;
+    height: 1em;
+    margin: 0 .5em;
+  }
+
+  .label {
+    margin-right: .35em;
+    letter-spacing: .15em;
+    &.secondary {
+      color: #999;
     }
+  }
+
+  .confidence.high {
+    color: #3a945b;
+  }
+
+  .attributes {
+    color: #3a945b;
+    font-size: .8em;
+    margin-right: .35em;
+  }
+
+  .count {
+    opacity: .5;
+  }
+
+  .description {
+    display: block;
+    opacity: .75;
+    margin-bottom: .5em;
+    line-height: 1.25em;
+  }
+
+  .inline-block {
+    display: inline-block;
+    height: 15rem;
+    overflow: auto;
+    min-width: 15rem;
+    word-wrap: break-word;
+  }
+
+  .c3 {
+    margin: 0 -0.5rem;
   }
 }
 
@@ -378,9 +368,7 @@
 .card.small.selected, .active > .card.small, .card.force-small.selected, .active > .card.force-small {
   background: #fff;
   color: #222;
-  @if theme-get(has-shadow) == 1 {
-    box-shadow: 0 0.05em 0.2em rgba(0, 0, 0, 0.25), inset 0 0 0 0.2rem rgba(0, 0, 0, 0.25);
-  }
+  box-shadow: 0 0.05em 0.2em rgba(0, 0, 0, 0.25), inset 0 0 0 0.2rem rgba(0, 0, 0, 0.25);
 }
 
 .card.alert.selected, .card.card-button.selected {

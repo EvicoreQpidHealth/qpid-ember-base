@@ -4,10 +4,8 @@
  ******************************************************************************/
 
 .tab-bar {
-  @include themify {
-    background: theme-get(secondary-color);
-    padding: 0 1rem;
-  }
+  background: #3A46A3;
+  padding: 0 1rem;
 }
 
 .tab-bar.editing {
