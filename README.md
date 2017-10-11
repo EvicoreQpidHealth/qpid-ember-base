@@ -1,33 +1,75 @@
 # QPID Ember Base Addon
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
-
-## Prerequisites
-
-You will need the following things properly installed on your computer.
-
-* [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/) (with NPM)
-* [Bower](https://bower.io/)
-* [Ember CLI](https://ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
-
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd guidelines-annotator`
-* `npm install`
-* `bower install`
+```
+ember install qpid-ember-base
+```
+
+This will install this addon into your application and list it in your package.json.
+
+## Contributing Installation
+
+### Install Homebrew
+
+```
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+### Install NVM
+
+```
+brew update && brew install nvm
+```
+
+### Install Node
+
+```
+nvm install $(cat .nvmrc)
+```
+
+Note: This will install the node version specified in the projects `.nvmrc` file.
+
+### Fork and Clone the project
+
+First, you'll want to fork the project. Once you fork the project, you'll
+need to clone your fork:
+
+```
+git clone git@github.com:USERNAME/qpid-ember-base.git
+```
+
+NOTE: `USERNAME` is a placeholder for the location of your fork.
+
+### Install Ember globally
+
+```
+npm i -g ember-cli@$(./.ember-cli-version)
+```
+
+Note: `./.ember-cli-version` is a node scrip that retrieves the `ember-cli` version from the `package.json` file.
+
+### Install Bower globally
+
+```
+npm i -g bower
+```
+
+### Install project dependencies
+
+While in the project, run:
+
+```
+npm i
+```
 
 ## Running / Development
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+```
+ember s
+```
 
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
+Visit your app at [http://localhost:4200](http://localhost:4200).
 
 ### Running Tests
 
@@ -38,15 +80,3 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 * `ember build` (development)
 * `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
