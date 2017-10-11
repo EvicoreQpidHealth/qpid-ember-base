@@ -76,15 +76,7 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-
-    @if (theme-get('name') == 'carriersweb') {
-      border-bottom: none;
-      font-weight: bolder;
-      text-align: left;
-      text-transform: none;
-    } @else {
-      text-transform: uppercase;
-    }
+    text-transform: uppercase;
   }
 }
 
