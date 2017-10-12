@@ -65,8 +65,38 @@ npm i
 
 ## Running / Development
 
+To run the dummy app in the repo:
+
 ```
 ember s
+```
+
+If you want to make updates and see them live in the consuming app:
+
+First, link the addon (while in the addon directory):
+
+```
+npm link
+```
+
+Then, link the addon in your app:
+
+```
+npm link qpid-ember-base
+```
+
+This will symlink `node_modules/qpid-ember-base` to the local directory on your machine.
+
+To remove the symlink, while in the consuming app:
+
+```
+npm unlink qpid-ember-base
+```
+
+And then remove the global symlink, while in the addon:
+
+```
+npm unlink
 ```
 
 Visit your app at [http://localhost:4200](http://localhost:4200).
