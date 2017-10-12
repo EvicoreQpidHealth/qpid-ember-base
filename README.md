@@ -71,9 +71,13 @@ To run the dummy app in the repo:
 ember s
 ```
 
+### Live Development with Consuming Apps
+
 If you want to make updates and see them live in the consuming app:
 
-First, link the addon (while in the addon directory):
+**Linking**
+
+First, [link](https://docs.npmjs.com/cli/link) the addon (while in the addon directory):
 
 ```
 npm link
@@ -86,6 +90,8 @@ npm link qpid-ember-base
 ```
 
 This will symlink `node_modules/qpid-ember-base` to the local directory on your machine.
+
+**Unlinking**
 
 To remove the symlink, while in the consuming app:
 
