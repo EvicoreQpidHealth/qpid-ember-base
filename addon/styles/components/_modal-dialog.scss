@@ -1,34 +1,30 @@
 .reveal-modal {
-  @include themify {
-    visibility: visible;
-    display: block;
-    top: 10% !important;
+  visibility: visible;
+  display: block;
+  top: 10% !important;
 
-    &.centered {
-      text-align: center;
-    }
-    &.small-width {
-      width: 374px;
-    }
-    p {
-      text-transform: none;
-      letter-spacing: normal;
-      font-size: 1.15rem;
-      margin-bottom: 1.5rem;
-    }
-    .close-reveal-modal {
-      right: .4rem;
-      font-weight: 400;
-      line-height: 1.2rem;
-    }
-    .close-reveal-modal:hover {
-      color: theme-get(primary-color);
-    }
+  &.centered {
+    text-align: center;
   }
-}
+  &.small-width {
+    width: 374px;
+  }
+  p {
+    text-transform: none;
+    letter-spacing: normal;
+    font-size: 1.15rem;
+    margin-bottom: 1.5rem;
+  }
+  .close-reveal-modal {
+    right: .4rem;
+    font-weight: 400;
+    line-height: 1.2rem;
+  }
+  .close-reveal-modal:hover {
+    color: theme-get(primary-color);
+  }
 
-.theme-evicore, .theme-carriersweb {
-  .reveal-modal {
+  @include themify {
     letter-spacing: 0.05rem;
     border: 0px;
     box-shadow: 0px 0px 10px 5px #999;
