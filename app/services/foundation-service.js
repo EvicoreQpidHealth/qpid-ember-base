@@ -1,1 +1,1 @@
-export { default } from 'qpid-ember-base/services/foundation-service'
+export { default } from 'qpid-ember-base/services/foundation-service';
