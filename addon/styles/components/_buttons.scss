@@ -73,7 +73,7 @@ button, .button {
          padding: 0.475rem 1.25rem;
        }
 
-       &:hover {
+       &:hover:not(:disabled) {
          background-color: rgba(theme-get(primary-color), 0.1);
          color: darken(theme-get(primary-color), 10);
        }
