@@ -1,4 +1,5 @@
-import Ember from 'ember';
+import { debug } from '@ember/debug';
+
 // https://developers.google.com/web/updates/2015/04/cut-and-copy-commands?hl=en
 // https://developer.mozilla.org/en-US/docs/Web/API/Selection selection api
 // https://developer.mozilla.org/en-US/docs/Web/API/Document/queryCommandSupported
@@ -21,9 +22,9 @@ export default function copyUtil(selector) {
     // Now that we've selected the anchor text, execute the copy command
     let successful = document.execCommand('copy');
     let msg = successful ? 'successful' : 'unsuccessful';
-    Ember.debug(`Copy command was ${msg}`);
+    debug(`Copy command was ${msg}`);
   } catch(err) {
-    Ember.debug('Oops, unable to copy');
+    debug('Oops, unable to copy');
   }
 
   // Remove the selections - NOTE: Should use

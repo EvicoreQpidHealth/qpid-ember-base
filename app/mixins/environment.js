@@ -1,10 +1,6 @@
-import Ember from 'ember';
+import Mixin from '@ember/object/mixin';
+import { computed } from '@ember/object';
 import config from '../config/environment';
-
-const {
-  Mixin,
-  computed
-} = Ember;
 
 export default Mixin.create({
   isProduction: computed({

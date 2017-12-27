@@ -1,11 +1,11 @@
-import Ember from 'ember';
+import { get } from '@ember/object';
 
 export default function arrayToObject(array, keyProperty='name', valueProperty='value') {
   let object = {};
 
   array.forEach((item) => {
-    let key = Ember.get(item, keyProperty);
-    let value = Ember.get(item, valueProperty);
+    let key = get(item, keyProperty);
+    let value = get(item, valueProperty);
     object[key] = value;
   });
 

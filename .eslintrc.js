@@ -12,6 +12,7 @@ module.exports = {
   },
   globals: {
     '$': true,
-    'server': true
+    'server': true,
+    'Promise': true
   }
 };

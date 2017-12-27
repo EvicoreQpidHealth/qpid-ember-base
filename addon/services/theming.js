@@ -1,4 +1,4 @@
-import Service from 'ember-service';
+import Service from '@ember/service';
 import jquery from 'jquery';
 import Configuration from '../configuration';
 
