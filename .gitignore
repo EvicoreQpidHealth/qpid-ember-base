@@ -1,16 +1,8 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
-/.idea
 /dist
-/*-dist
 /tmp
-/node
-/target
-/etc
-/lib
-/bin
-/cache
 
 # dependencies
 /node_modules
@@ -22,5 +14,10 @@
 /coverage/*
 /libpeerconnection.log
 npm-debug.log*
+yarn-error.log
 testem.log
-*.iml
+
+# ember-try
+.node_modules.ember-try/
+bower.json.ember-try
+package.json.ember-try

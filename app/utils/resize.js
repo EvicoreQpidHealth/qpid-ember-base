@@ -1,1 +1,1 @@
-export { default } from 'qpid-ember-base/utils/resize'
+export { default } from 'qpid-ember-base/utils/resize';

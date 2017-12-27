@@ -10,5 +10,5 @@ export function initialize(application) {
 
 export default {
   name: 'add-environment-to-stacktrace',
-  initialize: initialize
+  initialize
 };
