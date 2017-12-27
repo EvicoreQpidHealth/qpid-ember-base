@@ -1,8 +1,10 @@
-import Ember from 'ember';
+import Mixin from '@ember/object/mixin';
+import { schedule } from '@ember/runloop';
+import { on } from '@ember/object/evented';
 import refreshLogic from '../utils/resize';
 
-export default Ember.Mixin.create({
-  transition: function() {
-    Ember.run.schedule('afterRender', this, refreshLogic);
-  }.on('didTransition')
+export default Mixin.create({
+  transition: on('didTransition', function() {
+    schedule('afterRender', this, refreshLogic);
+  })
 });

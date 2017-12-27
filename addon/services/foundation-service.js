@@ -1,18 +1,23 @@
-import Ember from 'ember';
+import Service from '@ember/service';
+import { debounce, next } from '@ember/runloop';
+import jquery from 'jquery';
 
-export default Ember.Service.extend({
+export default Service.extend({
   reflow(plugin) {
-    Ember.run.debounce({ pluginName: plugin }, this._reflow, 150);
+    debounce({ pluginName: plugin }, this._reflow, 150);
   },
+
   _reflow() {
     let { pluginName } = this;
-    Ember.run.next(this, () => {
+
+    next(this, () => {
       if (pluginName) {
-        Ember.$(document).foundation(pluginName, 'reflow');
+        jquery(document).foundation(pluginName, 'reflow');
       } else {
-        Ember.$(document).foundation('reflow');
+        jquery(document).foundation('reflow');
       }
     });
   },
-  libs: Ember.$(window)[0].Foundation.libs
+
+  libs: jquery(window)[0].Foundation.libs
 });

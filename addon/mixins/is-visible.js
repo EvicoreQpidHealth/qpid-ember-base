@@ -1,6 +1,8 @@
-import Ember from 'ember';
+import Mixin from '@ember/object/mixin';
+import { debounce, scheduleOnce } from '@ember/runloop';
+import { on } from '@ember/object/evented';
 
-export default Ember.Mixin.create({
+export default Mixin.create({
   _bindScrollHandler() {
     let scrollHandler = this._onScroll.bind(this);
     this.$().closest('.scroll-container').bind('scroll', scrollHandler);
@@ -9,13 +11,13 @@ export default Ember.Mixin.create({
   _isInViewport: false,
 
   _onScroll() {
-    Ember.run.debounce(this, '_updateBoundingClientRect', this.get('_scrollTimeout'));
+    debounce(this, '_updateBoundingClientRect', this.get('_scrollTimeout'));
   },
 
   _scrollTimeout: 100,
 
-  _setup: Ember.on('didInsertElement', function() {
-    Ember.run.scheduleOnce('afterRender', () => {
+  _setup: on('didInsertElement', function() {
+    scheduleOnce('afterRender', () => {
       this.set('_windowHeight', window.innerHeight);
       this.set('_windowWidth', window.innerWidth);
       this._updateBoundingClientRect();
@@ -24,7 +26,7 @@ export default Ember.Mixin.create({
     this._bindScrollHandler();
   }),
 
-  _unbindScroll: Ember.on('willDestroyElement', function() {
+  _unbindScroll: on('willDestroyElement', function() {
     this.$().closest('.scroll-container').unbind('scroll');
   }),
 

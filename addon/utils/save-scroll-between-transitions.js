@@ -1,4 +1,5 @@
-import Ember from 'ember';
+import { merge } from '@ember/polyfills';
+
 /**
   Remember and restore a container's scroll position when
   returning from a liquid fire transition.
@@ -50,7 +51,7 @@ export default function saveScrollPos(opts) {
     resumeScrollPos: false
   };
   let scrollposition = this.oldElement.data('scrollPos');
-  Ember.merge(options, opts);
+  merge(options, opts);
 
   let $prevScrollElement = scopedElement(this.oldElement, options.oldScrollSelector);
 
