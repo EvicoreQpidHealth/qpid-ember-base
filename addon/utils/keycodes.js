@@ -1,7 +1,8 @@
 export default {
+  TAB: 9,
   ENTER: 13,
   ESCAPE: 27,
+  SPACE: 32,
   UP_ARROW: 38,
-  DOWN_ARROW: 40,
-  TAB: 9
+  DOWN_ARROW: 40
 };
