@@ -15,7 +15,7 @@ button, .button {
      border-color: theme-get(primary-color);
      transition: background-color .4s, border-color .4s, color .4s;
 
-     &:hover, &:visited, &:active {
+     &:hover, &:visited, &:active, &:focus {
        background-color: darken(theme-get(primary-color), 10);
        border-color: darken(theme-get(primary-color), 10);
      }
@@ -73,9 +73,11 @@ button, .button {
          padding: 0.475rem 1.25rem;
        }
 
-       &:hover:not(:disabled) {
-         background-color: rgba(theme-get(primary-color), 0.1);
-         color: darken(theme-get(primary-color), 10);
+       &:hover, &:focus {
+         &:not(:disabled) {
+           background-color: rgba(theme-get(primary-color), 0.3);
+           color: darken(theme-get(primary-color), 10);
+         }
        }
 
        &.disabled, &.disabled:hover, &.disabled:focus, &.disabled:active, &.disabled:visited {
